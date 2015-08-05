@@ -19,35 +19,43 @@
     <section class="page-header">
       <h1 class="project-name">BioJSON</h1>
       <h2 class="project-tagline"></h2>
-      <a href="https://github.com/tcofoegbu/bjs-template" class="btn">View on GitHub</a>
-      <a href="https://github.com/tcofoegbu/bjs-template/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/tcofoegbu/bjs-template/tarball/master" class="btn">Download .tar.gz</a>
+      <a href="biojsonschema.json" class="btn">View Schema</a>
+      <a href="biojsonschema.json" class="btn" target="_blank" download>Download Schema</a>
+      <a href="example_biojsons.json" class="btn" target="_blank" download>Download Sample BioJSON</a>
     </section>
 
     <section class="main-content">
       <h3>
 <a id="welcome-to-biojson-community-site" class="anchor" href="http://tcofoegbu.github.io/bjs-template/#welcome-to-biojson-community-site" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to BioJSON community site.</h3>
 <p align="justify">
-BioJSON was introduced in Jalview 2.9 to serve as a standard JavaScript Object Notation (JSON) model for representing/ exchanging Bioinformatics alignment data. This is the first version of the specification and we welcome all feedbacks to make BioJSON more standardised, sustainable and widely adopted worldwide. <!—The BioJSON schema content section was created with Docson - a  resource which uses a JSON schema to generate a beautified and interactive documentation.—>
+BioJSON is a JavaScript Object Notation (<a href="http://json.org/">JSON</a>) standard for the representation and exchange of bioinformatics data. The first version of the specification was developed in 2015 and implemented in Jalivew 2.9. 
+
+<h3>Get involved</h3>
+<p align="justify">
+Our aim with BioJSON  is to allow web based and standalone bioinformatics applications to efficiently and easily exchange data and results, enabling tools to be more sustainable and widely adopted worldwide. If you have any suggestions or want to contribute to the BioJSON standard, the please get in contact or file an issue.
 </p>
+
+
+
 <h3>
-
 <a id="feature-plans" class="anchor" href="http://tcofoegbu.github.io/bjs-template/#feature-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>BioJSON Vision</h3>
-<p align="justify">Our vision is to arrive at a point where any alignment data represented in JSON conforms to the BioJSON specifications.</p>
+<p align="justify">Our vision is to arrive at a point where any alignment data represented in <a href="http://json.org/">JSON</a> conforms to the BioJSON specifications.</p>
 
-<h3>Advantages of JSON/BioJSON</h3>
+<h3>Why use BioJSON</h3>
 <ul>
-   <li>BioJSON can represent very sophisticated sequence alignments along with their linked-data better than most Bioinformatics data format</li>
-   <li>BioJSON can be easily embedded in HTML pages and some image formats</li>
-   <li>BioJSON is based on JSON which is very popular and can be parsed in almost all programming languages</li>
+   <li>BioJSON v1 represents multiple sequence alignments, quantitative and symbolic sequence and alignment annotation, and also allows rendering and display styles to be encoded
+   <li>BioJSON can represent very sophisticated sequence alignments along with their linked-data better than most bioinformatics data formats</li>
+   <li>BioJSON can be embedded as a supporting data for interactive web pages</li>
+   <li><a href="http://json.org/">JSON</a> is very popular and can be parsed in almost all programming languages</li>
    <li>Integrates seamlessly with the HTTP rest architecture</li>
    <li>Very light weight, self describing and easy to understand</li>
-   <li>JSON format is text only and uses JavaScript syntax</li>
-   <li>JSON is hierarchical (i.e. it can contain values within values)</li>
 </ul>
-<p align="justify">More information about JSON can be found at <a href="http://json.org/">http://json.org/</a>.</p>
 
-<p align="justify">BioJSON can currently represent any sequence alignment data along with its annotations, features, groups, hidden sequences, hidden columns, colour schemes, and custom application settings. However phylogenetic trees, structures and more sophisticated annotations are not yet supported but will gradually be introduced in future versions of BioJSON.</p>
+<h3>What does BioJSON support?</h3>
+<p align="justify">BioJSON v1 is designed to represent multiple sequence alignments along with their annotations, features, groups, hidden sequences, hidden columns and colour schemes. It also allows and custom application settings to be encoded for the Jalview multiple alignment workbench.</p>
+
+<p align="justify">
+The next version of BioJSON will provide more complete support for interchange of multiple alignment data, and introduce new representations for  phylogenetic data and 3D structures.</p>
 
 
 <h3> BioJSON UML Diagram</h3>
@@ -56,25 +64,29 @@ BioJSON was introduced in Jalview 2.9 to serve as a standard JavaScript Object N
 
 <h3>
 <a id="support-or-contact" class="anchor" href="http://tcofoegbu.github.io/bjs-template/#main-content" aria-hidden="true"><span class="octicon octicon-link"></span></a>The BioJSON Schema</h3>
+<p>BioJSON is specified using version 4 of the jsonschema standard. The schema is available via the github repository or just click: download the BioJSON schema.</p>
+
+<p>You can explore the BioJSON schema with the interactive visualisation created with Docson.</p>
+<p>Instructions for interacting with the Docson schema</p>
+
 <ul align="justify">
    <li>When the mouse is hovered over the elements in the BioJSON schema section, traversable elements become highlighted and clickable</li>
    <li>Click the “object” button or the plus “+” link to expand an object</li>
    <li>Click the minus “-” to collapse an object </li>
-   <li>Click the parenthesis “{}” link to view the JSON schema which provides a more technical description of the data</li>
-   <li>When you expand an object the following information becomes visible: The variables in the object, their data types and the description of each variable. This exactly corresponds to how it appears in BioJSON</li>
+   <li>The parenthesis “{}” link shows the underlying <a href="http://json.org/">JSON</a> schema which provides a formal description of the BioJSON format</li>
+   <li>Expanding an object reveals its variables, their type and a brief description in the object, their data types and the description of each variable. This exactly corresponds to how it appears in BioJSON</li>
 </ul>
 
 <p>
 <div id="doc"></div>  
 </p> 
 
-<p>Downloads: <a href="biojsonschema.json" target="_blank" download>BioJSON schema</a> | <a href="example_biojsons.json" target="_blank" download>Sample BioJSON</a></p>
-
 
 
 
 <h3>
 <a id="sample-biojson" class="anchor" href="http://tcofoegbu.github.io/bjs-template/#sample-biojson" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample BioJSON data</h3>
+<p>Download a <a href="example_biojsons.json" target="_blank" download>Sample BioJSON</a> document. Alternatively view it below:
 
 <pre><code>
 {
@@ -262,17 +274,22 @@ BioJSON was introduced in Jalview 2.9 to serve as a standard JavaScript Object N
 <h3>See BioJSON in Action!</h3>
 The current application of BioJSON in Jalview 2.9 includes:
 <ul>
-   <li>Export/ import of alignment to/from a JSON flat file</li>
-   <li>Embedding an alignment in HTML (File &#8594; Export Image &#8594; HTML)</li>
-   <li>Embedding an alignment in BioJS MSA viewer (File &#8594; Export Image &#8594; BioJS)</li>
-   <li>Retrieval of embedded alignment data from HTML/BioJS files (Drag and drop file in Jalview)</li>
+   <li>Export and import of BioJSON data as <a href="http://json.org/">JSON</a> flat files</li>
+   <li>Export and import of supporting data for interactive web pages, including:
+       <ul>
+          <li>Interactive SVG figures (File &#8594; Export Image &#8594; HTML)</li>
+          <li>The BioJS MSA viewer (File &#8594; Export Image &#8594; BioJS)</li>
+       </ul>
+   </li>
 </ul>
 
-Future applications of BioJSON in Jalview:
+
+<h3>Future capabilities</h3>
+Some of our goals for future versions of BioJSON are:
 <ul>
-   <li>Primary data protocol for Jalview web services (JalviewWS)</li>
-   <li>Primary data protocol for the Javascript version of Jalview (JalviewJS)</li>
-   <li>Storage of linked alignments (i.e. CDNA/Protein alignments)</li>
+   <li>BioJSON services for Jalview desktop</li>
+   <li>BioJSON for the Javascript version of Jalview (JalviewJS)</li>
+   <li>Representation of linked CDNA and Protein alignments views</li>
 </ul>
 
 
@@ -280,7 +297,7 @@ Future applications of BioJSON in Jalview:
 <h3>
 <a id="authors-and-contributors" class="anchor" href="http://tcofoegbu.github.io/bjs-template/#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
 <p align="justify">Tochukwu Charles Ofoegbu, Jim Procter and Geoff Barton.</p>
-<p align="justify">If you wish to contribute please get in touch with <a href="mailto:jalviewdiscuss@jalview.org">The Jalview Team</a></p>
+<p align="justify">If you wish to contribute then get in touch with <a href="mailto:jalviewdiscuss@jalview.org">The Jalview Team</a></p>
 
 
 <footer class="site-footer">
