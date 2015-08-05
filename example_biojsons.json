@@ -1,0 +1,179 @@
+{
+    "seqs": [
+        {
+            "name": "FER_CAPAN/125-135",
+            "start": 125,
+            "svid": "1.0",
+            "end": 135,
+            "id": "1841182323",
+            "seq": "VAYPQSDVTIE",
+            "order": 1
+        },
+        {
+            "name": "FER1_SOLLC/125-135",
+            "start": 125,
+            "svid": "1.0",
+            "end": 135,
+            "id": "1827803677",
+            "seq": "VAYPKGDVTIE",
+            "order": 2
+        },
+        {
+            "name": "Q93XJ9_SOLTU/125-135",
+            "start": 125,
+            "svid": "1.0",
+            "end": 135,
+            "id": "246218698",
+            "seq": "VAYPKCDVTIE",
+            "order": 3
+        },
+        {
+            "name": "FER1_PEA/130-140",
+            "start": 130,
+            "svid": "1.0",
+            "end": 140,
+            "id": "320593394",
+            "seq": "VAYPTSDVVIE",
+            "order": 4
+        },
+        {
+            "name": "Q7XA98_TRIPR/133-143",
+            "start": 133,
+            "svid": "1.0",
+            "end": 143,
+            "id": "252345420",
+            "seq": "VAFPTSDVTIE",
+            "order": 5
+        }
+    ],
+    "seqGroups": [
+        {
+            "displayText": true,
+            "startRes": 2,
+            "groupName": "JGroup:48822124",
+            "endRes": 4,
+            "colourText": false,
+            "seqsHash": [
+                "1841182323",
+                "246218698"
+            ],
+            "svid": "1.0",
+            "showNonconserved": false,
+            "colourScheme": "Zappo",
+            "displayBoxes": true
+        }
+    ],
+    "alignAnnotation": [
+        {
+            "svid": "1.0",
+            "annotations": [
+                {
+                    "displayCharacter": "",
+                    "value": 0,
+                    "secondaryStructure": "\u0000"
+                },
+                {
+                    "displayCharacter": "",
+                    "value": 0,
+                    "secondaryStructure": "\u0000"
+                },
+                {
+                    "displayCharacter": "",
+                    "value": 0,
+                    "secondaryStructure": "\u0000"
+                },
+                {
+                    "description": "",
+                    "displayCharacter": "β",
+                    "value": 0,
+                    "secondaryStructure": "E"
+                },
+                {
+                    "description": "",
+                    "displayCharacter": "β",
+                    "value": 0,
+                    "secondaryStructure": "E"
+                },
+                {
+                    "displayCharacter": "",
+                    "value": 0,
+                    "secondaryStructure": "\u0000"
+                },
+                {
+                    "description": "",
+                    "displayCharacter": "α",
+                    "value": 0,
+                    "secondaryStructure": "H"
+                },
+                {
+                    "description": "",
+                    "displayCharacter": "α",
+                    "value": 0,
+                    "secondaryStructure": "H"
+                },
+                {
+                    "displayCharacter": "",
+                    "value": 0,
+                    "secondaryStructure": "\u0000"
+                },
+                {
+                    "displayCharacter": "",
+                    "value": 0,
+                    "secondaryStructure": "\u0000"
+                },
+                {
+                    "displayCharacter": "",
+                    "value": 0,
+                    "secondaryStructure": "\u0000"
+                }
+            ],
+            "description": "Secondary Structure",
+            "label": "Secondary Structure"
+        }
+    ],
+    "seqFeatures": [
+        {
+            "fillColor": "#c13516",
+            "score": 0,
+            "sequenceRef": "246218698",
+            "featureGroup": "Jalview",
+            "svid": "1.0",
+            "description": "feature description",
+            "xStart": 5,
+            "xEnd": 9,
+            "type": "feature"
+        },
+        {
+            "fillColor": "#c13516",
+            "score": 0,
+            "sequenceRef": "320593394",
+            "featureGroup": "Jalview",
+            "svid": "1.0",
+            "description": "feature description",
+            "xStart": 5,
+            "xEnd": 9,
+            "type": "feature"
+        },
+        {
+            "fillColor": "#c13516",
+            "score": 0,
+            "sequenceRef": "252345420",
+            "featureGroup": "Jalview",
+            "svid": "1.0",
+            "description": "feature description",
+            "xStart": 5,
+            "xEnd": 9,
+            "type": "feature"
+        }
+    ],
+    "appSettings": {
+        "globalColorScheme": "foo",
+        "webStartUrl": "www.jalview.org/services/launchApp",
+        "application": "Jalview",
+        "hiddenSeqs": "1827803677",
+        "showSeqFeatures": "true",
+        "version": "2.9",
+        "hiddenCols": "0-0;10-10"
+    },
+    "svid": "1.0"
+}
