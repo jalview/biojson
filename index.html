@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/docson.css">
     <script src="lib/require.js"></script>
   <style type="text/css"></style>
+
 </head>
   <body>
     <section class="page-header">
@@ -60,11 +61,14 @@ Future versions of BioJSON will provide more complete support for interchange of
 
 <h3>
 <a id="support-or-contact" class="anchor" href="http://tcofoegbu.github.io/bjs-template/#main-content" aria-hidden="true"><span class="octicon octicon-link"></span></a>The BioJSON Schema</h3>
-<p align="justify">BioJSON is specified using version 4 of the <a href="http://json-schema.org/">jsonschema</a> standard. The schema is available via the github repository or can be downloaded from <a href="biojsonschema.json" target="_blank" download>here</a>.
+<p align="justify">
+BioJSON is specified using version 4 of the <a href="http://json-schema.org/">jsonschema</a> standard. The schema is available via the github repository or can be downloaded from <a href="biojsonschema.json" target="_blank" download>here</a>. You can explore the BioJSON schema with the interactive visualisation created with Docson.
+</p>
 
-You can explore the BioJSON schema with the interactive visualisation created with Docson.</p>
-<p align="justify">Instructions for interacting with the Docson schema</p>
 
+<div id="accordion">
+<p align="justify"><a href="javascript:toggle_visibility('accordion-content');">Instructions for interacting with the Docson schema</a></p>
+ <div id="accordion-content" style="display:none">
 <ul align="justify">
    <li>When the mouse is hovered over the elements in the BioJSON schema section, traversable elements become highlighted and clickable</li>
    <li>Click an object’s “object” button to expand it, or the plus “+” link to expand all objects</li>
@@ -72,6 +76,8 @@ You can explore the BioJSON schema with the interactive visualisation created wi
    <li>The parenthesis “{}” link shows the underlying <a href="http://json.org/">JSON</a> schema which provides a formal description of the BioJSON format</li>
    <li>Expanding an object reveals its variables, their type and a brief description in the object, their data types and the description of each variable.</li>
 </ul>
+</div>
+</div>
 
 <p>
 <div id="doc"></div>  
@@ -611,5 +617,16 @@ Some of our goals for future versions of BioJSON are:
         });
     });
 </script>
+
+<script type="text/javascript">
+    function toggle_visibility(id) {
+       var e = document.getElementById(id);
+       if(e.style.display == 'block')
+          e.style.display = 'none';
+       else
+          e.style.display = 'block';
+    }
+</script>
+
 </body>
 </html>
