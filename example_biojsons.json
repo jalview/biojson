@@ -5,7 +5,7 @@
             "start": 125,
             "svid": "1.0",
             "end": 135,
-            "id": "1841182323",
+            "id": "1433338220",
             "seq": "VAYPQSDVTIE",
             "order": 1
         },
@@ -14,7 +14,7 @@
             "start": 125,
             "svid": "1.0",
             "end": 135,
-            "id": "1827803677",
+            "id": "1356721399",
             "seq": "VAYPKGDVTIE",
             "order": 2
         },
@@ -23,7 +23,7 @@
             "start": 125,
             "svid": "1.0",
             "end": 135,
-            "id": "246218698",
+            "id": "1896751980",
             "seq": "VAYPKCDVTIE",
             "order": 3
         },
@@ -32,7 +32,7 @@
             "start": 130,
             "svid": "1.0",
             "end": 140,
-            "id": "320593394",
+            "id": "240451529",
             "seq": "VAYPTSDVVIE",
             "order": 4
         },
@@ -41,11 +41,20 @@
             "start": 133,
             "svid": "1.0",
             "end": 143,
-            "id": "252345420",
+            "id": "1089050582",
             "seq": "VAFPTSDVTIE",
             "order": 5
         }
     ],
+    "appSettings": {
+        "globalColorScheme": "foo",
+        "webStartUrl": "www.jalview.org/services/launchApp",
+        "application": "Jalview",
+        "hiddenSeqs": "1356721399",
+        "showSeqFeatures": "true",
+        "version": "2.9",
+        "hiddenCols": "0-0;10-10"
+    },
     "seqGroups": [
         {
             "displayText": true,
@@ -54,8 +63,8 @@
             "endRes": 4,
             "colourText": false,
             "seqsHash": [
-                "1841182323",
-                "246218698"
+                "1433338220",
+                "1896751980"
             ],
             "svid": "1.0",
             "showNonconserved": false,
@@ -69,61 +78,61 @@
             "annotations": [
                 {
                     "displayCharacter": "",
-                    "value": 0,
+                    "value": 0.0,
                     "secondaryStructure": "\u0000"
                 },
                 {
                     "displayCharacter": "",
-                    "value": 0,
+                    "value": 0.0,
                     "secondaryStructure": "\u0000"
                 },
                 {
                     "displayCharacter": "",
-                    "value": 0,
+                    "value": 0.0,
                     "secondaryStructure": "\u0000"
                 },
                 {
                     "description": "",
                     "displayCharacter": "β",
-                    "value": 0,
+                    "value": 0.0,
                     "secondaryStructure": "E"
                 },
                 {
                     "description": "",
                     "displayCharacter": "β",
-                    "value": 0,
+                    "value": 0.0,
                     "secondaryStructure": "E"
                 },
                 {
                     "displayCharacter": "",
-                    "value": 0,
+                    "value": 0.0,
                     "secondaryStructure": "\u0000"
                 },
                 {
                     "description": "",
                     "displayCharacter": "α",
-                    "value": 0,
+                    "value": 0.0,
                     "secondaryStructure": "H"
                 },
                 {
                     "description": "",
                     "displayCharacter": "α",
-                    "value": 0,
+                    "value": 0.0,
                     "secondaryStructure": "H"
                 },
                 {
                     "displayCharacter": "",
-                    "value": 0,
+                    "value": 0.0,
                     "secondaryStructure": "\u0000"
                 },
                 {
                     "displayCharacter": "",
-                    "value": 0,
+                    "value": 0.0,
                     "secondaryStructure": "\u0000"
                 },
                 {
                     "displayCharacter": "",
-                    "value": 0,
+                    "value": 0.0,
                     "secondaryStructure": "\u0000"
                 }
             ],
@@ -131,49 +140,40 @@
             "label": "Secondary Structure"
         }
     ],
+    "svid": "1.0",
     "seqFeatures": [
         {
-            "fillColor": "#c13516",
-            "score": 0,
-            "sequenceRef": "246218698",
+            "fillColor": "#8db520",
+            "score": 0.0,
+            "sequenceRef": "1896751980",
             "featureGroup": "Jalview",
             "svid": "1.0",
-            "description": "feature description",
+            "description": "1a45",
             "xStart": 5,
             "xEnd": 9,
-            "type": "feature"
+            "type": "RESNUM"
         },
         {
-            "fillColor": "#c13516",
-            "score": 0,
-            "sequenceRef": "320593394",
+            "fillColor": "#8db520",
+            "score": 0.0,
+            "sequenceRef": "240451529",
             "featureGroup": "Jalview",
             "svid": "1.0",
-            "description": "feature description",
+            "description": "1a45",
             "xStart": 5,
             "xEnd": 9,
-            "type": "feature"
+            "type": "RESNUM"
         },
         {
-            "fillColor": "#c13516",
-            "score": 0,
-            "sequenceRef": "252345420",
+            "fillColor": "#8db520",
+            "score": 0.0,
+            "sequenceRef": "1089050582",
             "featureGroup": "Jalview",
             "svid": "1.0",
-            "description": "feature description",
+            "description": "1a45",
             "xStart": 5,
             "xEnd": 9,
-            "type": "feature"
+            "type": "RESNUM"
         }
-    ],
-    "appSettings": {
-        "globalColorScheme": "foo",
-        "webStartUrl": "www.jalview.org/services/launchApp",
-        "application": "Jalview",
-        "hiddenSeqs": "1827803677",
-        "showSeqFeatures": "true",
-        "version": "2.9",
-        "hiddenCols": "0-0;10-10"
-    },
-    "svid": "1.0"
+    ]
 }

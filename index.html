@@ -20,44 +20,51 @@
     <section class="page-header">
       <h1 class="project-name">BioJSON</h1>
       <h2 class="project-tagline"></h2>
-      <a href="#doc" class="btn">View Schema</a>
+      <a href="#doc" class="btn">Browse Schema</a>
       <a href="biojsonschema.json" class="btn" target="_blank" download>Download Schema</a>
       <a href="example_biojsons.json" class="btn" target="_blank" download>Download Sample BioJSON</a>
     </section>
 
     <section class="main-content">
       <h3>
-<a id="welcome-to-biojson-community-site" class="anchor" href="http://tcofoegbu.github.io/bjs-template/#welcome-to-biojson-community-site" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to BioJSON community site.</h3>
+<a id="welcome-to-biojson-community-site" class="anchor" href="http://tcofoegbu.github.io/bjs-template/#welcome-to-biojson-community-site" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to the BioJSON community site.</h3>
 <p align="justify">
 BioJSON is a JavaScript Object Notation (<a href="http://json.org/">JSON</a>) standard for the representation and exchange of bioinformatics data. The first version of the specification was developed in 2015 and implemented in Jalview 2.9. 
 
 <h3>Get involved</h3>
 <p align="justify">
-Our aim with BioJSON  is to allow web based and standalone bioinformatics applications to efficiently and easily exchange data and results, enabling tools to be more sustainable and widely adopted worldwide. If you have any suggestions or want to contribute to the BioJSON standard, then get in <a href="mailto:jalviewdiscuss@jalview.org">contact</a> or <a href="https://github.com/jalview/biojson/issues/new">file an issue</a>.
+Our aim with BioJSON  is to allow mobile, web-based and standalone bioinformatics applications to efficiently and easily exchange data and metadata. If you have any suggestions or want to contribute to the BioJSON standard, then get in <a href="mailto:jalviewdiscuss@jalview.org">contact</a> or <a href="https://github.com/jalview/biojson/issues/new">file an issue</a>.
 </p>
 
 
 <h3>Why use BioJSON</h3>
-<ul>
-   <li>BioJSON v1 represents multiple sequence alignments, quantitative and symbolic sequence and alignment annotation, and also allows rendering and display styles to be encoded
-   <li>BioJSON can be embedded as a supporting data for interactive web pages</li>
-   <li><a href="http://json.org/">JSON</a> is very popular and can be parsed in almost all programming languages</li>
+<ul align="justify">
+   <li><a href="http://json.org/">JSON</a> is very popular with established parsers in most programming languages</li>
+   <li>BioJSON v1 allows multiple sequence alignments as well as quantitative and symbolic sequence and alignment annotation to be represented. It also encodes rendering and display styles</li>
+   <li>BioJSON can be embedded as supporting data for interactive web pages</li>
+   
    <li>Integrates seamlessly with the HTTP rest architecture</li>
    <li>Very light weight, self describing and easy to understand</li>
 </ul>
-<p align="justify">We think that BioJSON is the best choice for representing alignment and associated data on the web. It provides a standard way of handling multiple alignments and annotations, which enables interoperation between stand-alone and web based multiple alignment and analysis systems.</p>
+<p align="justify">We think that BioJSON is the best choice for representing alignment and associated data on the web. It provides a way of handling multiple alignments and annotations, which enables interoperation between stand-alone and web based multiple alignment and analysis systems.</p>
 
 
 <h3>What does BioJSON support?</h3>
-<p align="justify">BioJSON v1 is designed to represent multiple sequence alignments along with their annotations, features, groups, hidden sequences, hidden columns and colour schemes. It also allows custom application settings to be encoded for the Jalview multiple alignment workbench.</p>
+<p align="justify">BioJSON v1 describes single alignments with their annotations, features, groups, hidden sequences, hidden columns and colour schemes. It also allows custom application settings to be encoded for the Jalview multiple alignment workbench.</p>
 
 <p align="justify">
-Future versions of BioJSON will provide more complete support for interchange of multiple alignment data, and introduce new representations for  phylogenetic data and 3D structures.</p>
+Future versions of BioJSON will provide more complete support for the interchange of multiple alignment data. It will also introduce new representations for  phylogenetic data and 3D structures.</p>
 
 
 <h3> BioJSON v1 UML Diagram</h3>
 <img src="biojson_uml_big.png" alt="BioJSON UML" width="100%" height="100%">
-
+<p>Some UML notations and their meanings</p>
+<ul>
+    <li>0..1 &#8594; zero or one </li>
+    <li>0..* &#8594; zero or many </li>
+    <li>1..1 &#8594; one to one </li>
+    <li>1..* &#8594; one or many </li>
+</ul>
 
 <h3>
 <a id="support-or-contact" class="anchor" href="http://tcofoegbu.github.io/bjs-template/#main-content" aria-hidden="true"><span class="octicon octicon-link"></span></a>The BioJSON Schema</h3>
@@ -66,7 +73,6 @@ BioJSON is specified using version 4 of the <a href="http://json-schema.org/">js
 </p>
 
 
-<div id="accordion">
 <p align="justify"><a href="javascript:toggle_visibility('accordion-content');">Instructions for interacting with the Docson schema</a></p>
  <div id="accordion-content" style="display:none">
 <ul align="justify">
@@ -74,9 +80,8 @@ BioJSON is specified using version 4 of the <a href="http://json-schema.org/">js
    <li>Click an object’s “object” button to expand it, or the plus “+” link to expand all objects</li>
    <li>Click the minus “-” to collapse all objects </li>
    <li>The parenthesis “{}” link shows the underlying <a href="http://json.org/">JSON</a> schema which provides a formal description of the BioJSON format</li>
-   <li>Expanding an object reveals its variables, their type and a brief description in the object, their data types and the description of each variable.</li>
+   <li>Expanding an object reveals its variables, their type and a brief description in the object, their data types and the description of each variable</li>
 </ul>
-</div>
 </div>
 
 <p>
@@ -88,8 +93,11 @@ BioJSON is specified using version 4 of the <a href="http://json-schema.org/">js
 
 <h3>
 <a id="sample-biojson" class="anchor" href="http://tcofoegbu.github.io/bjs-template/#sample-biojson" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample BioJSON data</h3>
-<p>Download a <a href="example_biojsons.json" target="_blank" download>Sample BioJSON</a> document. Alternatively view it below:
+<p>
+Download a <a href="example_biojsons.json" target="_blank" download>Sample BioJSON</a> or view it <a href="javascript:toggle_visibility('sample-biojson-data');">here</a>.
+</p>
 
+<div id="sample-biojson-data" style="display:none">
 <pre><code>
 {
     "seqs": [
@@ -98,7 +106,7 @@ BioJSON is specified using version 4 of the <a href="http://json-schema.org/">js
             "start": 125,
             "svid": "1.0",
             "end": 135,
-            "id": "1841182323",
+            "id": "1433338220",
             "seq": "VAYPQSDVTIE",
             "order": 1
         },
@@ -107,7 +115,7 @@ BioJSON is specified using version 4 of the <a href="http://json-schema.org/">js
             "start": 125,
             "svid": "1.0",
             "end": 135,
-            "id": "1827803677",
+            "id": "1356721399",
             "seq": "VAYPKGDVTIE",
             "order": 2
         },
@@ -116,7 +124,7 @@ BioJSON is specified using version 4 of the <a href="http://json-schema.org/">js
             "start": 125,
             "svid": "1.0",
             "end": 135,
-            "id": "246218698",
+            "id": "1896751980",
             "seq": "VAYPKCDVTIE",
             "order": 3
         },
@@ -125,7 +133,7 @@ BioJSON is specified using version 4 of the <a href="http://json-schema.org/">js
             "start": 130,
             "svid": "1.0",
             "end": 140,
-            "id": "320593394",
+            "id": "240451529",
             "seq": "VAYPTSDVVIE",
             "order": 4
         },
@@ -134,11 +142,20 @@ BioJSON is specified using version 4 of the <a href="http://json-schema.org/">js
             "start": 133,
             "svid": "1.0",
             "end": 143,
-            "id": "252345420",
+            "id": "1089050582",
             "seq": "VAFPTSDVTIE",
             "order": 5
         }
     ],
+    "appSettings": {
+        "globalColorScheme": "foo",
+        "webStartUrl": "www.jalview.org/services/launchApp",
+        "application": "Jalview",
+        "hiddenSeqs": "1356721399",
+        "showSeqFeatures": "true",
+        "version": "2.9",
+        "hiddenCols": "0-0;10-10"
+    },
     "seqGroups": [
         {
             "displayText": true,
@@ -147,8 +164,8 @@ BioJSON is specified using version 4 of the <a href="http://json-schema.org/">js
             "endRes": 4,
             "colourText": false,
             "seqsHash": [
-                "1841182323",
-                "246218698"
+                "1433338220",
+                "1896751980"
             ],
             "svid": "1.0",
             "showNonconserved": false,
@@ -162,61 +179,61 @@ BioJSON is specified using version 4 of the <a href="http://json-schema.org/">js
             "annotations": [
                 {
                     "displayCharacter": "",
-                    "value": 0,
+                    "value": 0.0,
                     "secondaryStructure": "\u0000"
                 },
                 {
                     "displayCharacter": "",
-                    "value": 0,
+                    "value": 0.0,
                     "secondaryStructure": "\u0000"
                 },
                 {
                     "displayCharacter": "",
-                    "value": 0,
+                    "value": 0.0,
                     "secondaryStructure": "\u0000"
                 },
                 {
                     "description": "",
                     "displayCharacter": "β",
-                    "value": 0,
+                    "value": 0.0,
                     "secondaryStructure": "E"
                 },
                 {
                     "description": "",
                     "displayCharacter": "β",
-                    "value": 0,
+                    "value": 0.0,
                     "secondaryStructure": "E"
                 },
                 {
                     "displayCharacter": "",
-                    "value": 0,
+                    "value": 0.0,
                     "secondaryStructure": "\u0000"
                 },
                 {
                     "description": "",
                     "displayCharacter": "α",
-                    "value": 0,
+                    "value": 0.0,
                     "secondaryStructure": "H"
                 },
                 {
                     "description": "",
                     "displayCharacter": "α",
-                    "value": 0,
+                    "value": 0.0,
                     "secondaryStructure": "H"
                 },
                 {
                     "displayCharacter": "",
-                    "value": 0,
+                    "value": 0.0,
                     "secondaryStructure": "\u0000"
                 },
                 {
                     "displayCharacter": "",
-                    "value": 0,
+                    "value": 0.0,
                     "secondaryStructure": "\u0000"
                 },
                 {
                     "displayCharacter": "",
-                    "value": 0,
+                    "value": 0.0,
                     "secondaryStructure": "\u0000"
                 }
             ],
@@ -224,54 +241,50 @@ BioJSON is specified using version 4 of the <a href="http://json-schema.org/">js
             "label": "Secondary Structure"
         }
     ],
+    "svid": "1.0",
     "seqFeatures": [
         {
-            "fillColor": "#c13516",
-            "score": 0,
-            "sequenceRef": "246218698",
+            "fillColor": "#8db520",
+            "score": 0.0,
+            "sequenceRef": "1896751980",
             "featureGroup": "Jalview",
             "svid": "1.0",
-            "description": "feature description",
+            "description": "1a45",
             "xStart": 5,
             "xEnd": 9,
-            "type": "feature"
+            "type": "RESNUM"
         },
         {
-            "fillColor": "#c13516",
-            "score": 0,
-            "sequenceRef": "320593394",
+            "fillColor": "#8db520",
+            "score": 0.0,
+            "sequenceRef": "240451529",
             "featureGroup": "Jalview",
             "svid": "1.0",
-            "description": "feature description",
+            "description": "1a45",
             "xStart": 5,
             "xEnd": 9,
-            "type": "feature"
+            "type": "RESNUM"
         },
         {
-            "fillColor": "#c13516",
-            "score": 0,
-            "sequenceRef": "252345420",
+            "fillColor": "#8db520",
+            "score": 0.0,
+            "sequenceRef": "1089050582",
             "featureGroup": "Jalview",
             "svid": "1.0",
-            "description": "feature description",
+            "description": "1a45",
             "xStart": 5,
             "xEnd": 9,
-            "type": "feature"
+            "type": "RESNUM"
         }
-    ],
-    "appSettings": {
-        "globalColorScheme": "foo",
-        "webStartUrl": "www.jalview.org/services/launchApp",
-        "application": "Jalview",
-        "hiddenSeqs": "1827803677",
-        "showSeqFeatures": "true",
-        "version": "2.9",
-        "hiddenCols": "0-0;10-10"
-    },
-    "svid": "1.0"
+    ]
 }
 </code></pre>
+</div>
 
+
+<h3>Sample BioJSON embeded in SVG + HTML</h3>
+<a href="biojson_svg.html" target="_blank" ><img src="biojs_svg_html.png" alt="BioJSON UML" ></a>
+<p align="justify">Click <a href="biojson_svg.html" target="_blank" >here</a> to see the example live. You can import the embedded BioJSON to Jalview by clicking the “Launch in Jalview” button on the example page.</p>
 
 <h3>See BioJSON in Action!</h3>
 The current application of BioJSON in Jalview 2.9 includes:
@@ -355,7 +368,7 @@ Some of our goals for future versions of BioJSON are:
                     "seq": {
                         "id": "seqs/seq",
                         "type": "string",
-                        "description": "Sequence Residues"
+                        "description": "Sequence residue characters. An aligned sequence may contain <br>one of the following gap characters “.”, “-” or “ ”" 
                     },
                     "svid": {
                         "id": "seqs/svid",
@@ -438,7 +451,7 @@ Some of our goals for future versions of BioJSON are:
                             "items": [],
                             "minItems": "0",
                             "maxItems": "*",
-                            "description": "An array of the unique id's for the sequences belonging to the group"
+                            "description": "An array of the unique id's for the sequences belonging to <br>the group"
                         }
                     }
                 }
@@ -489,7 +502,7 @@ Some of our goals for future versions of BioJSON are:
                                     },
                                     "value": {
                                         "id": "alignAnnotation/annotations/value",
-                                        "type": "integer",
+                                        "type": "float",
                                         "description": "Value of the annotation"
                                     }
                                 }
@@ -522,7 +535,7 @@ Some of our goals for future versions of BioJSON are:
                     "sequenceRef": {
                         "id": "seqFeatures/sequenceRef",
                         "type": "string",
-                        "description": "Reference to the Sequence in the alignment (More like a foreign key)"
+                        "description": "Reference to the sequence in the alignment<br> (more like a foreign key)"
                     },
                     "featureGroup": {
                         "id": "seqFeatures/featureGroup",
@@ -551,7 +564,7 @@ Some of our goals for future versions of BioJSON are:
                     },
                     "score": {
                         "id": "seqFeatures/score",
-                        "type": "integer",
+                        "type": "float",
                         "description": "Score"
                     }
                 }
@@ -567,12 +580,12 @@ Some of our goals for future versions of BioJSON are:
                 "globalColorScheme": {
                     "id": "appSettings/globalColorScheme",
                     "type": "string",
-                    "description": "The Global colour scheme applied to all the sequences within the alignment"
+                    "description": "The Global colour scheme applied to all the sequences <br>within the alignment"
                 },
                 "webStartUrl": {
                     "id": "appSettings/webStartUrl",
                     "type": "string",
-                    "description": "Jalview specific setting which points to the url for launching Jalview"
+                    "description": "Jalview specific setting which points to the url for <br>launching Jalview"
                 },
                 "application": {
                     "id": "appSettings/application",
@@ -592,10 +605,10 @@ Some of our goals for future versions of BioJSON are:
                 "hiddenCols": {
                     "id": "appSettings/hiddenCols",
                     "type": "string",
-                    "description": "Hidden alignment column ranges in comma delimited string i.e [2-5, 9-9, 11-12]"
+                    "description": "Hidden alignment column ranges in comma delimited string <br>i.e [2-5, 9-9, 11-12]"
                 }
             },
-            "description": "This is for custom application specific settings in a hashmap structure (key/value) pairs."
+            "description": "This is a hash-map (key-value pairs) for storing custom <br>application specific settings."
         },
         "svid": {
             "id": "svid",
