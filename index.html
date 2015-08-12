@@ -33,7 +33,7 @@ BioJSON is a JavaScript Object Notation (<a href="http://json.org/">JSON</a>) sp
 
 <h3>Get involved</h3>
 <p align="justify">
-Our aim with BioJSON  is to allow mobile, web-based and standalone bioinformatics applications to efficiently and easily exchange data and metadata. If you have any suggestions or want to contribute to the BioJSON standard, then get in <a href="mailto:jalviewdiscuss@jalview.org">contact</a> or <a href="https://github.com/jalview/biojson/issues/new">file an issue</a>.
+Our aim with BioJSON  is to allow mobile, web-based and standalone bioinformatics applications to efficiently and easily exchange data and metadata. If you have any suggestions or want to contribute to the BioJSON standard, then get in <a href="mailto:jalview-discuss@jalview.org">contact</a> or <a href="https://github.com/jalview/biojson/issues/new">file an issue</a>.
 </p>
 
 
@@ -341,17 +341,17 @@ Some of our goals for future versions of BioJSON are:
                     "start": {
                         "id": "seqs/start",
                         "type": "integer",
-                        "description": "The index of the sequence’s first residue in it’s source database"
+                        "description": "The index of the sequence’s first residue in its source database, <br>using a one-based numbering index system"
                     },
                     "end": {
                         "id": "seqs/end",
                         "type": "integer",
-                        "description": "The index of the sequence’s last residue in it’s source database"
+                        "description": "The index of the sequence’s last residue in its source database, <br>using a one-based numbering index system"
                     },
                     "order": {
                         "id": "seqs/order",
                         "type": "integer",
-                        "description": "The order/position of a sequence in the alignment space"
+                        "description": "The order/position of a sequence in the alignment space"  
                     },
                     "id": {
                         "id": "seqs/id",
@@ -431,7 +431,7 @@ Some of our goals for future versions of BioJSON are:
                         "colourText": {
                             "id": "seqGroups/colourText",
                             "type": "boolean",
-                            "description": "Determines if the Residues text for the group is coloured"
+                            "description": "Determines if the residues text for the group is coloured"
                         },
                         "displayText": {
                             "id": "seqGroups/displayText",
@@ -598,10 +598,10 @@ Some of our goals for future versions of BioJSON are:
                 "hiddenCols": {
                     "id": "appSettings/hiddenCols",
                     "type": "string",
-                    "description": "Hidden alignment column ranges in comma delimited string <br>i.e [2-5, 9-9, 11-12]"
+                    "description": "Hidden alignment column ranges in a comma delimited string <br>i.e [0-0, 2-5, 9-9]. The index is zero-based"
                 }
             },
-            "description": "This is a hash-map (key-value pairs) for storing custom <br>application specific settings."
+            "description": "This is a hash-map (key-value pairs) for storing custom application <br>specific settings."
         },
         "svid": {
             "id": "svid",
