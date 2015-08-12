@@ -103,6 +103,7 @@ Download a <a href="example_biojsons.json" target="_blank" download>Sample BioJS
     "seqs": [
         {
             "name": "FER_CAPAN/125-133",
+            "type": "Protein",
             "start": 125,
             "svid": "1.0",
             "end": 133,
@@ -112,6 +113,7 @@ Download a <a href="example_biojsons.json" target="_blank" download>Sample BioJS
         },
         {
             "name": "FER1_SOLLC/125-133",
+            "type": "Protein",
             "start": 125,
             "svid": "1.0",
             "end": 133,
@@ -121,6 +123,7 @@ Download a <a href="example_biojsons.json" target="_blank" download>Sample BioJS
         },
         {
             "name": "Q93XJ9_SOLTU/125-134",
+            "type": "Protein",
             "start": 125,
             "svid": "1.0",
             "end": 134,
@@ -130,6 +133,7 @@ Download a <a href="example_biojsons.json" target="_blank" download>Sample BioJS
         },
         {
             "name": "FER1_PEA/130-138",
+            "type": "Protein",
             "start": 130,
             "svid": "1.0",
             "end": 138,
@@ -139,6 +143,7 @@ Download a <a href="example_biojsons.json" target="_blank" download>Sample BioJS
         },
         {
             "name": "Q7XA98_TRIPR/133-141",
+            "type": "Protein",
             "start": 133,
             "svid": "1.0",
             "end": 141,
@@ -163,7 +168,7 @@ Download a <a href="example_biojsons.json" target="_blank" download>Sample BioJS
             "groupName": "JGroup:48822124",
             "endRes": 4,
             "colourText": false,
-            "seqsHash": [
+            "sequenceRefs": [
                 "1856498783",
                 "477931709"
             ],
@@ -338,6 +343,11 @@ Some of our goals for future versions of BioJSON are:
                         "type": "string",
                         "description": "Sequence name"
                     },
+                    "type": {
+                        "id": "seqs/type",
+                        "type": "string",
+                        "description": "Sequence type (i.e DNA, RNA, or Protein)"
+                    },
                     "start": {
                         "id": "seqs/start",
                         "type": "integer",
@@ -438,8 +448,8 @@ Some of our goals for future versions of BioJSON are:
                             "type": "boolean",
                             "description": "Determines if the texts of the group is displayed or not"
                         },
-                        "seqsHash": {
-                            "id": "seqGroups/seqsHash",
+                        "sequenceRefs": {
+                            "id": "seqGroups/sequenceRefs",
                             "type": "array",
                             "items": [],
                             "minItems": "0",
