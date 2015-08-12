@@ -1,3 +1,125 @@
+
+How likely are you to recommend Gliffy to a friend or co-worker?
+Not at all likely 0 1 2 3 4 5 6 7 8 9 10  Extremely likely
+powered by wootric
+ 
+Send Feedback
+File 
+Edit 
+Share 
+Help 
+My Documents
+ 
+      100%       Save
+
+UML Class
+This shape library
+is only available
+to Pro users.
+Please upgrade for access to these shapes.
+UML Sequence
+This shape library
+is only available
+to Pro users.
+Please upgrade for access to these shapes.
+UML Activity
+This shape library
+is only available
+to Pro users.
+Please upgrade for access to these shapes.
+UML State Machine
+This shape library
+is only available
+to Pro users.
+Please upgrade for access to these shapes.
+UML Deployment
+This shape library
+is only available
+to Pro users.
+Please upgrade for access to these shapes.
+UML Component
+This shape library
+is only available
+to Pro users.
+Please upgrade for access to these shapes.
+UML Use Case
+This shape library
+is only available
+to Pro users.
+Please upgrade for access to these shapes.
+Basic Shapes
+UML 1.0
+Entity-Relationship
+Images
+You have only 1.4MB left. <div class="chevron">Upgrade for more space</div>
+online.image.browser.upgrade2
+Drag & drop images from your computer to the canvas or
+Select Image to Upload
+
+PNG, JPG & GIF supported
+Maximum file size is 1MB
+  
+
+More Shapes
+JalveiwJSON_model, v16
+0..*
+BioJSON
+0..*
+seqGroups
+0..1
+Annotation
+  displayCharacter: String
+  description: String
+  secondaryStructure: char
+  value: float
+AlignmentAnnotation
+  label: String
+  description: String
+alignmentAnnotation
+AppSettings: Hashtable
+  application: String
+  version: String   globalColourScheme: String
+  webStartUrl: String
+  showSeqFeatures: boolean
+  wrapModeEnabled: boolean
+appSettings
+0..1
+SequenceFeatures
+  xStart: int
+  xEnd: int
+  sequenceRef: String
+  type: String
+  score: float
+  description: String
+  otherDetails: Hashtable
+  links: String[]
+seqFeatures
+SequenceGroup
+0..*
+0..*
+  colourScheme: String
+  groupName: String
+  description: String
+  displayTexts: boolean
+  displayBoxes: boolean
+  colourText: boolean
+  showNonconserved: boolean
+  startRes: int
+  endRes: int
+  sequenceRefs: String[]
+Sequence
+seqs
+  id: String
+  seq: String
+  name: String
+  svid: String
+  type: String
+  start: int
+  end: int
+  order: int
+Time to upgrade!  You have 0 diagrams remaining in your free Gliffy Basic account.
+    
+Document Source
 {
   "contentType": "application/gliffy+json",
   "version": "1.3",
@@ -20,7 +142,7 @@
       "com.gliffy.libraries.images"
     ],
     "autosaveDisabled": false,
-    "lastSerialized": 1439373928760,
+    "lastSerialized": 1439395106242,
     "analyticsProduct": "Online"
   },
   "embeddedResources": {
@@ -85,7 +207,7 @@
             "StartPositionConstraint": {
               "nodeId": 5,
               "px": 1,
-              "py": 0.2375
+              "py": 0.2126865671641791
             }
           }
         },
@@ -654,11 +776,11 @@
               ],
               [
                 34,
-                -27.5
+                -20.5
               ],
               [
                 102,
-                -27.5
+                -20.5
               ]
             ],
             "lockSegments": {
@@ -1061,7 +1183,7 @@
         "id": 5,
         "uid": "com.gliffy.shape.erd.erd_v1.default.entity_with_attributes",
         "width": 120,
-        "height": 120,
+        "height": 134,
         "lockAspectRatio": false,
         "lockShape": false,
         "order": 25,
@@ -1159,7 +1281,7 @@
             "id": 8,
             "uid": null,
             "width": 120,
-            "height": 102,
+            "height": 116,
             "lockAspectRatio": false,
             "lockShape": false,
             "order": "auto",
@@ -1187,7 +1309,7 @@
                 "id": 9,
                 "uid": null,
                 "width": 120,
-                "height": 102,
+                "height": 116,
                 "lockAspectRatio": false,
                 "lockShape": false,
                 "order": "auto",
@@ -1200,7 +1322,7 @@
                     "overflow": "none",
                     "vposition": "none",
                     "hposition": "none",
-                    "html": "<p style=\"text-align:left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; id: String</span></p><p style=\"text-align:left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; seq: String</span></p><p style=\"text-align:left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; name: String</span></p><p style=\"text-align:left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; svid:String</span></p><p style=\"text-align:left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; start: int</span></p><p style=\"text-align:left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; end: int</span></p><p style=\"text-align:left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; order: int</span></p>",
+                    "html": "<p style=\"text-align: left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; id: String</span></p><p style=\"text-align: left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; seq: String</span></p><p style=\"text-align: left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; name: String</span></p><p style=\"text-align: left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; svid: String</span></p><p style=\"text-align: left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; type: String</span></p><p style=\"text-align: left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; start: int</span></p><p style=\"text-align: left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; end: int</span></p><p style=\"text-align: left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; order: int</span></p>",
                     "paddingLeft": 2,
                     "paddingRight": 2,
                     "paddingBottom": 2,
@@ -1642,7 +1764,7 @@
                     "overflow": "none",
                     "vposition": "none",
                     "hposition": "none",
-                    "html": "<p style=\"text-align:left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; colourScheme: String</span></p><p style=\"text-align:left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; groupName: String</span></p><p style=\"text-align:left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; description: String</span></p><p style=\"text-align:left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; displayTexts: boolean</span></p><p style=\"text-align:left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; displayBoxes: boolean</span></p><p style=\"text-align:left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; colourText: boolean</span></p><p style=\"text-align:left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; showNonconserved: boolean</span></p><p style=\"text-align:left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; startRes: int</span></p><p style=\"text-align:left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; endRes: int</span></p><p style=\"text-align:left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; seqsHash: String[]</span></p>",
+                    "html": "<p style=\"text-align: left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; colourScheme: String</span></p><p style=\"text-align: left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; groupName: String</span></p><p style=\"text-align: left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; description: String</span></p><p style=\"text-align: left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; displayTexts: boolean</span></p><p style=\"text-align: left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; displayBoxes: boolean</span></p><p style=\"text-align: left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; colourText: boolean</span></p><p style=\"text-align: left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; showNonconserved: boolean</span></p><p style=\"text-align: left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; startRes: int</span></p><p style=\"text-align: left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; endRes: int</span></p><p style=\"text-align: left;\"><span style=\"font-family: Arial; font-weight: normal; text-decoration: none; font-size: 12px; line-height: 14px;\">&nbsp; sequenceRefs: String[]</span></p>",
                     "paddingLeft": 2,
                     "paddingRight": 2,
                     "paddingBottom": 2,
