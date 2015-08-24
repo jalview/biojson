@@ -23,7 +23,7 @@
                                 },
                                 "secondaryStructure": {
                                     "type": "string",
-                                    "description": "Determines what is rendered for the secondary </br>structure <ul><li>’E’ - indicates Beta Sheet/Strand <li>’H’ - indicates alpha helix </li><li> ‘\\u0000’ - indicates blank</li></ul></br>For RNA Helix (only shown when working with</br> nucleotide sequences): <ul><li> ‘(’ - indicates bases pair with columns upstream</br> (to right) </li><li> ’(’ - indicate region pairs with bases to the left</li></ul>",
+                                    "description": "Determines what is rendered for the secondary </br>structure <ul><li>‘E’ - indicates Beta Sheet/Strand <li>‘H’ - indicates alpha helix </li><li> ‘\\u0000’ - indicates blank</li></ul></br>For RNA Helix: <ul><li> ‘(’ - indicates bases pair with columns upstream</br> (to right) </li><li> ‘)’ - indicate region pairs with bases to the left</li></ul>",
                                     "enum": [
                                         "E",
                                         "H",
@@ -232,7 +232,7 @@
                     "svid"
                 ]
             },
-            "description": "A sequence group is a bracket of alignment residues spanning <br>across multiple columns and rows. These can be treated as a <br>sub-alignments.",
+            "description": "A sequence group is a bracket of alignment residues which <br>could span across multiple columns and/or rows. These can be <br>treated as a sub-alignments.",
             "maxItems": 2147483647
         },
         "seqs": {
