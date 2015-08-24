@@ -328,6 +328,7 @@
 .docson .desc {
     padding-left: 6px;
     line-height: 17px;
+    word-wrap: break-word;
 }
 
 .docson .desc p {
