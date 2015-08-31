@@ -78,9 +78,10 @@
         },
         "colourScheme": {
             "type": "string",
+            "description": "The <a href=\"colour_schemes.html\">Colour Scheme</a> applied to the alignment",
             "enum": [
                 "None",
-                "Custom",
+                "User Defined",
                 "Clustal",
                 "Zappo",
                 "Taylor",
@@ -88,9 +89,15 @@
                 "Pyrimidine",
                 "Purine",
                 "Turn",
+                "Helix",
                 "Strand",
                 "Buried",
-                "Hydro"
+                "Hydro",
+                "T-Coffee Scores",
+                "RNA Interaction type",
+                "Blosum62",
+                "RNA Helices",
+                "% Identity"
             ]
         },
         "seqFeatures": {
@@ -175,7 +182,7 @@
                 "properties": {
                     "colourScheme": {
                         "type": "string",
-                        "description": "The Colour Scheme applied to the Sequence Group"
+                        "description": "The <a href=\"colour_schemes.html\">Colour Scheme</a> applied to the Sequence Group"
                     },
                     "description": {
                         "type": "string",
@@ -232,7 +239,7 @@
                     "svid"
                 ]
             },
-            "description": "A sequence group is a bracket of alignment residues which <br>could span across multiple columns and/or rows. These can be <br>treated as a sub-alignments.",
+            "description": "A sequence group is a region of an alignment which could <br>span across multiple columns and rows. These can be treated as<br> a sub-alignments.",
             "maxItems": 2147483647
         },
         "seqs": {
@@ -258,7 +265,7 @@
                     },
                     "seq": {
                         "type": "string",
-                        "description": "Sequence residue characters. An aligned sequence may contain <br>one of the following gap characters “.”, “-” or “ ”",
+                        "description": "A sequence is a succession of letters that indicate the order<br>of residues within a protein or nucleotides within a DNA <br>(using GACT) or RNA (GACU) molecule. An aligned sequence may contain <br>one of the following gap characters “.”, “-” or “ ”",
                         "minLength": 3,
                         "maxLength": 2147483647
                     },
@@ -289,9 +296,8 @@
                     "svid"
                 ]
             },
-            "description": "A sequence group is a bracket of alignment residues spanning <br>across multiple columns and rows. These can be treated as a <br>sub-alignments.",
-            "minItems": 1,
-            "maxItems": 2147483647
+            "description": "An array of Sequences which makes up the Alignment",
+            "minItems": 1
         },
         "svid": {
             "type": "string",

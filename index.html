@@ -5,7 +5,6 @@
     <title>BioJSON Format Documentation</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
-    <title>BioJSON by tcofoegbu</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="./BioJSON_files/normalize.css" media="screen">
     <link href="./BioJSON_files/css" rel="stylesheet" type="text/css">
@@ -13,7 +12,6 @@
     <link rel="stylesheet" type="text/css" href="./BioJSON_files/github-light.css" media="screen">
     <link rel="stylesheet" href="css/docson.css">
     <script src="lib/require.js"></script>
-  <style> p.pwrap {width: 350; text-align: justify; word-wrap: break-word;}</style>
 
 </head>
   <body>
@@ -27,30 +25,28 @@
 
     <section class="main-content">
       <h3>
-<a id="welcome-to-biojson-community-site" class="anchor" href="http://tcofoegbu.github.io/bjs-template/#welcome-to-biojson-community-site" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to the BioJSON community site.</h3>
+<a id="welcome-to-biojson-community-site" class="anchor" href="http://tcofoegbu.github.io/bjs-template/#welcome-to-biojson-community-site" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to BioJSON</h3>
 <p>
-BioJSON is a JavaScript Object Notation (<a href="http://json.org/">JSON</a>) specification for the representation and exchange of bioinformatics data. The first version of the specification was developed in 2015 and implemented in Jalview 2.9. 
+BioJSON Version 1.0 is a JavaScript Object Notation (<a href="http://json.org/">JSON</a>) specification for the representation and exchange of single multiple sequence alignments (MSAs) with their annotations, features, groups, hidden sequences, hidden columns and colour schemes. It also allows custom application settings to be encoded for the Jalview (<a href="http://www.jalview.org">www.jalview.org</a>) multiple alignment workbench. 
+
+<p>
+Future versions of BioJSON will provide more complete support for the interchange of multiple alignment data and associated metadata. It will also introduce new representations for phylogenetic data and three-dimensional structures.
+
+<p>
+Although Version 1.0 is specific to multiple sequence alignemnts, we think BioJSON could be extended to allow mobile, web-based and standalone bioinformatics applications of many types to easily exchange data and three-dimensional structures.
+<p>
+The first version of the specification was developed in 2015 and implemented in Jalview 2.9. 
 
 <h3>Get involved</h3>
 <p>
-Our aim with BioJSON  is to allow mobile, web-based and standalone bioinformatics applications to efficiently and easily exchange data and metadata. If you have any suggestions or want to contribute to the BioJSON standard, then get in <a href="mailto:jalview-discuss@jalview.org">contact</a> or <a href="https://github.com/jalview/biojson/issues/new">file an issue</a>.
-</p>
+If you have any comments about the current BioJSON or want to contribute to the development of BioJSON then please <a href="https://github.com/jalview/biojson/issues/new">file an issue</a>.
+
+
 
 
 <h3>Why use BioJSON</h3>
-<ul>
-   <li><a href="http://json.org/">JSON</a> is very popular with established parsers in most programming languages</li>
-   <li>BioJSON v1 allows multiple sequence alignments as well as quantitative and symbolic sequence and alignment annotation to be represented. It also encodes rendering and display styles</li>
-   <li>BioJSON can be embedded as supporting data for interactive web pages</li>
-   
-   <li>Integrates seamlessly with the HTTP rest architecture</li>
-   <li>Very light weight, self describing and easy to understand</li>
-</ul>
-<p>We think it is a generally useful format to use for representing alignment and associated data on the web. It provides a way of handling single multiple-sequence alignments and annotations, which enables interoperation between stand-alone, web based and mobile multiple-sequence alignment and analysis systems.</p>
-
-
-<h3>What does BioJSON support?</h3>
-<p>BioJSON v1 describes single alignments with their annotations, features, groups, hidden sequences, hidden columns and colour schemes. It also allows custom application settings to be encoded for the Jalview multiple alignment workbench.</p>
+<p>
+<a href="http://json.org/">JSON</a> is generally useful as a lightweight data exchange format and is now often used in preference to more verbose solutions such as XML.  BioJSON has been built on JSON to extend the data exchange options possible with current multiple alignment file formats and to allow straightforward additions to the exchange medium that can accommodate annotations and other metadata as well as application-specific settings or parameters.<p>If you are presenting multiple alignment-based data on the web, then BioJSON V 1.0 provides a method to describe the alignment and its annotations.  BioJSON V 1.0 also allows the straightforward import/export of these data to/from the Jalview desktop application
 
 <p>
 Future versions of BioJSON will provide more complete support for the interchange of multiple alignment data. It will also introduce new representations for  phylogenetic data and 3D structures.</p>
@@ -287,9 +283,13 @@ Download a <a href="example_biojsons.json" target="_blank" download>Sample BioJS
 </div>
 
 
-<h3>Sample BioJSON embeded with SVG in HTML</h3>
+<h3>Sample HTML embedded with BioJSON</h3>
+<p>
+The image below is a screenshot of a Jalview multiple sequence alignment rendered with SVG and exported as a HTML file embedded with BioJSON.
+</p>
 <a href="biojson_svg.html" target="_blank" ><img src="biojs_svg_html.png" alt="BioJSON UML" ></a>
-<p>Click <a href="biojson_svg.html" target="_blank" >here</a> to see a live example of BioJSON embedded with SVG in HTML. You can import the embedded BioJSON to Jalview by clicking the “Launch in Jalview” button on the example page.</p>
+
+<p>Click <a href="biojson_svg.html" target="_blank" >here</a> or the screenshot to view the live example. You can import the embedded BioJSON to Jalview by clicking the “Launch in Jalview” button on the example page.</p>
 
 <h3>See BioJSON in Action!</h3>
 The current application of BioJSON in Jalview 2.9 includes:
@@ -301,15 +301,15 @@ The current application of BioJSON in Jalview 2.9 includes:
           <li>The BioJS MSA viewer (File &#8594; Export Image &#8594; BioJS)</li>
        </ul>
    </li>
-</ul>
+</ul> 
 
 
-<h3>Future capabilities</h3>
-Some of our goals for future versions of BioJSON are:
+<h3>Future Applications</h3>
+Some of the future applications of BioJSON include:
 <ul>
-   <li>BioJSON services for Jalview desktop</li>
-   <li>BioJSON for the Javascript version of Jalview (JalviewJS)</li>
-   <li>Representation of linked CDNA and Protein alignments views</li>
+   <li>Underlying data format for Jalview web-services</li>
+   <li>Representation of linked cDNA and Protein alignments views</li>
+   <li>Data exchange format for Javascript version of Jalview (JalviewJS)</li>
 </ul>
 
 
@@ -325,12 +325,13 @@ Some of our goals for future versions of BioJSON are:
     require.config({ baseUrl: ""});
     require(["docson", "lib/jquery"], function(docson) {
         $(function() {  
-            var schema = {"type":"object","description":"A specification for the representation and exchange of bioinformatics data","title":"BioJSON","properties":{"alignAnnotation":{"type":"array","items":{"type":"object","properties":{"annotations":{"type":"array","items":{"type":"object","properties":{"description":{"type":"string","description":"Description for the annotation"},"displayCharacter":{"type":"string","description":"Display character for the given annotation"},"secondaryStructure":{"type":"string","description":"Determines what is rendered for the secondary </br>structure <ul><li>‘E’ - indicates Beta Sheet/Strand <li>‘H’ - indicates alpha helix </li><li> ‘\\u0000’ - indicates blank</li></ul></br>For RNA Helix: <ul><li> ‘(’ - indicates bases pair with columns upstream</br> (to right) </li><li> ‘)’ - indicate region pairs with bases to the left</li></ul>","enum":["E","H","\u0000",")","("]},"value":{"type":"number","description":"Value of the annotation"}},"required":["secondaryStructure"]}},"description":{"type":"string","description":"Description for the Alignment Annotation"},"label":{"type":"string","description":"Label for the Alignment Annotation"},"svid":{"type":"string","description":"Serial version id for the alignAnnotation object model"}},"required":["svid"]},"description":"Alignment annotations stores symbols and graphs usually rendered </br>below the alignment.","exclusiveMaximum":true,"maxItems":2147483647},"appSettings":{"type":"object","properties":{"":{"type":"object"},"isEmpty":{"type":"boolean"}},"description":"This is an array of key=value pairs for storing custom application <br>specific settings","maxItems":1},"colourScheme":{"type":"string","enum":["None","Custom","Clustal","Zappo","Taylor","Nucleotide","Pyrimidine","Purine","Turn","Strand","Buried","Hydro"]},"seqFeatures":{"type":"array","items":{"type":"object","properties":{"description":{"type":"string","description":"Description for the feature"},"featureGroup":{"type":"string","description":"Feature group"},"fillColor":{"type":"string","description":"Fill colour"},"links":{"type":"array","items":{"type":"string"},"description":"URL links associated to the feature"},"otherDetails":{"type":"object","properties":{"":{"type":"object"},"isEmpty":{"type":"boolean"}},"description":"Additional metadata for the feature"},"score":{"type":"number","description":"Score"},"sequenceRef":{"type":"string","description":"Reference to the sequence in the alignment<br> (more like a foreign key)","minItems":1,"maxItems":2147483647},"svid":{"type":"string","description":"Serial version id for the <b>SeqFeature</b> object"},"type":{"type":"string","description":"The name or type of the SequenceFeature"},"xEnd":{"type":"integer","description":"End residue position for the sequence feature"},"xStart":{"type":"integer","description":"Start residue position for the sequence feature"}},"required":["featureGroup","sequenceRef","svid","type","xEnd","xStart"]},"description":"Sequence features are associated with sequences rather than <br>alignments. A sequence feature can span across multiple <br>sequences in an alignment. They indicate features generated <br>by the same analysis process or retrieved from the same database <br>(such as Uniprot features).","maxItems":2147483647},"seqGroups":{"type":"array","items":{"type":"object","properties":{"colourScheme":{"type":"string","description":"The Colour Scheme applied to the Sequence Group"},"description":{"type":"string","description":"Serial version identifier for the <b>seqGroup</b> object model"},"endRes":{"type":"integer","description":"The index of the group’s last residue in the alignment space"},"groupName":{"type":"string","description":"The name assigned to the seqGroup"},"sequenceRefs":{"type":"array","items":{"type":"string"},"description":"An array of the unique id's for the sequences belonging to the group","uniqueItems":true,"minItems":1,"maxItems":2147483647},"startRes":{"type":"integer","description":"The index of the group’s first residue in the alignment space"},"svid":{"type":"string","description":"Serial version identifier for the <b>seqGroup</b> object model"},"colourText":{"type":"boolean","description":"Determines if the residues text for the group is coloured"},"displayBoxes":{"type":"boolean","description":"Determines if the seqGroup border should be visible or not"},"displayText":{"type":"boolean","description":"Determines if the texts of the group is displayed or not"},"showNonconserved":{"type":"boolean","description":"Boolean value indicating whether residues should only be shown <br/>that are different from current reference or consensus sequence"}},"required":["endRes","groupName","sequenceRefs","startRes","svid"]},"description":"A sequence group is a bracket of alignment residues which <br>could span across multiple columns and/or rows. These can be <br>treated as a sub-alignments.","maxItems":2147483647},"seqs":{"type":"array","items":{"type":"object","properties":{"end":{"type":"integer","description":"The index of the sequence’s last residue in its source database, <br>using a one-based numbering index system"},"id":{"type":"string","description":"Unique identifier for a given Sequence"},"name":{"type":"string","description":"Sequence name"},"order":{"type":"integer","description":"The order/position of a sequence in the alignment space"},"seq":{"type":"string","description":"Sequence residue characters. An aligned sequence may contain <br>one of the following gap characters “.”, “-” or “ ”","minLength":3,"maxLength":2147483647},"start":{"type":"integer","description":"The index of the sequence’s first residue in its source database, <br>using a one-based numbering index system"},"svid":{"type":"string","description":"Serial version identifier for the <b>seqs</b> object model"},"type":{"type":"string","description":"Sequence type","enum":["DNA","RNA","Protein"]}},"required":["end","id","name","seq","start","svid"]},"description":"A sequence group is a bracket of alignment residues spanning <br>across multiple columns and rows. These can be treated as a <br>sub-alignments.","minItems":1,"maxItems":2147483647},"svid":{"type":"string","description":"Serial version identifier for <b>BioJSON</b> schema"}},"required":["appSettings","seqs","svid"],"$schema":"http://json-schema.org/draft-04/schema#"}
+            var schema = {"type":"object","description":"A specification for the representation and exchange of bioinformatics data","title":"BioJSON","properties":{"alignAnnotation":{"type":"array","items":{"type":"object","properties":{"annotations":{"type":"array","items":{"type":"object","properties":{"description":{"type":"string","description":"Description for the annotation"},"displayCharacter":{"type":"string","description":"Display character for the given annotation"},"secondaryStructure":{"type":"string","description":"Determines what is rendered for the secondary </br>structure <ul><li>‘E’ - indicates Beta Sheet/Strand <li>‘H’ - indicates alpha helix </li><li> ‘\\u0000’ - indicates blank</li></ul></br>For RNA Helix: <ul><li> ‘(’ - indicates bases pair with columns upstream</br> (to right) </li><li> ‘)’ - indicate region pairs with bases to the left</li></ul>","enum":["E","H","\u0000",")","("]},"value":{"type":"number","description":"Value of the annotation"}},"required":["secondaryStructure"]}},"description":{"type":"string","description":"Description for the Alignment Annotation"},"label":{"type":"string","description":"Label for the Alignment Annotation"},"svid":{"type":"string","description":"Serial version id for the alignAnnotation object model"}},"required":["svid"]},"description":"Alignment annotations stores symbols and graphs usually rendered </br>below the alignment.","exclusiveMaximum":true,"maxItems":2147483647},"appSettings":{"type":"object","properties":{"":{"type":"object"},"isEmpty":{"type":"boolean"}},"description":"This is an array of key=value pairs for storing custom application <br>specific settings","maxItems":1},"colourScheme":{"type":"string","description":"The <a href=\"colour_schemes.html\">Colour Scheme</a> applied to the alignment","enum":["None","User Defined","Clustal","Zappo","Taylor","Nucleotide","Pyrimidine","Purine","Turn","Helix","Strand","Buried","Hydro","T-Coffee Scores","RNA Interaction type","Blosum62","RNA Helices","% Identity"]},"seqFeatures":{"type":"array","items":{"type":"object","properties":{"description":{"type":"string","description":"Description for the feature"},"featureGroup":{"type":"string","description":"Feature group"},"fillColor":{"type":"string","description":"Fill colour"},"links":{"type":"array","items":{"type":"string"},"description":"URL links associated to the feature"},"otherDetails":{"type":"object","properties":{"":{"type":"object"},"isEmpty":{"type":"boolean"}},"description":"Additional metadata for the feature"},"score":{"type":"number","description":"Score"},"sequenceRef":{"type":"string","description":"Reference to the sequence in the alignment<br> (more like a foreign key)","minItems":1,"maxItems":2147483647},"svid":{"type":"string","description":"Serial version id for the <b>SeqFeature</b> object"},"type":{"type":"string","description":"The name or type of the SequenceFeature"},"xEnd":{"type":"integer","description":"End residue position for the sequence feature"},"xStart":{"type":"integer","description":"Start residue position for the sequence feature"}},"required":["featureGroup","sequenceRef","svid","type","xEnd","xStart"]},"description":"Sequence features are associated with sequences rather than <br>alignments. A sequence feature can span across multiple <br>sequences in an alignment. They indicate features generated <br>by the same analysis process or retrieved from the same database <br>(such as Uniprot features).","maxItems":2147483647},"seqGroups":{"type":"array","items":{"type":"object","properties":{"colourScheme":{"type":"string","description":"The <a href=\"colour_schemes.html\">Colour Scheme</a> applied to the Sequence Group"},"description":{"type":"string","description":"Serial version identifier for the <b>seqGroup</b> object model"},"endRes":{"type":"integer","description":"The index of the group’s last residue in the alignment space"},"groupName":{"type":"string","description":"The name assigned to the seqGroup"},"sequenceRefs":{"type":"array","items":{"type":"string"},"description":"An array of the unique id's for the sequences belonging to the group","uniqueItems":true,"minItems":1,"maxItems":2147483647},"startRes":{"type":"integer","description":"The index of the group’s first residue in the alignment space"},"svid":{"type":"string","description":"Serial version identifier for the <b>seqGroup</b> object model"},"colourText":{"type":"boolean","description":"Determines if the residues text for the group is coloured"},"displayBoxes":{"type":"boolean","description":"Determines if the seqGroup border should be visible or not"},"displayText":{"type":"boolean","description":"Determines if the texts of the group is displayed or not"},"showNonconserved":{"type":"boolean","description":"Boolean value indicating whether residues should only be shown <br/>that are different from current reference or consensus sequence"}},"required":["endRes","groupName","sequenceRefs","startRes","svid"]},"description":"A sequence group is a region of an alignment which could <br>span across multiple columns and rows. These can be treated as<br> a sub-alignments.","maxItems":2147483647},"seqs":{"type":"array","items":{"type":"object","properties":{"end":{"type":"integer","description":"The index of the sequence’s last residue in its source database, <br>using a one-based numbering index system"},"id":{"type":"string","description":"Unique identifier for a given Sequence"},"name":{"type":"string","description":"Sequence name"},"order":{"type":"integer","description":"The order/position of a sequence in the alignment space"},"seq":{"type":"string","description":"A sequence is a succession of letters that indicate the order<br>of residues within a protein or nucleotides within a DNA <br>(using GACT) or RNA (GACU) molecule. An aligned sequence<br>may contain one of the following gap characters “.”, “-” or “ ”","minLength":3,"maxLength":2147483647},"start":{"type":"integer","description":"The index of the sequence’s first residue in its source database, <br>using a one-based numbering index system"},"svid":{"type":"string","description":"Serial version identifier for the <b>seqs</b> object model"},"type":{"type":"string","description":"Sequence type","enum":["DNA","RNA","Protein"]}},"required":["end","id","name","seq","start","svid"]},"description":"An array of Sequences which makes up the Alignment","minItems":1},"svid":{"type":"string","description":"Serial version identifier for <b>BioJSON</b> schema"}},"required":["appSettings","seqs","svid"],"$schema":"http://json-schema.org/draft-04/schema#"}
             docson.templateBaseUrl="templates";
             docson.doc("doc", schema);
         });
     });
 </script>
+
 
 <script type="text/javascript">
     function toggle_visibility(id) {
