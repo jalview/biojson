@@ -1,10 +1,8 @@
-{
-    "seqs": [
+{"seqs": [
         {
             "name": "FER_CAPAN/125-133",
             "type": "Protein",
             "start": 125,
-            "svid": "1.0",
             "end": 133,
             "id": "1856498783",
             "seq": "VAYPQS-DV-E",
@@ -14,7 +12,6 @@
             "name": "FER1_SOLLC/125-133",
             "type": "Protein",
             "start": 125,
-            "svid": "1.0",
             "end": 133,
             "id": "1603641013",
             "seq": "VAYPKG-DV-E",
@@ -24,7 +21,6 @@
             "name": "Q93XJ9_SOLTU/125-134",
             "type": "Protein",
             "start": 125,
-            "svid": "1.0",
             "end": 134,
             "id": "477931709",
             "seq": "VAYPKCDVT-E",
@@ -34,7 +30,6 @@
             "name": "FER1_PEA/130-138",
             "type": "Protein",
             "start": 130,
-            "svid": "1.0",
             "end": 138,
             "id": "1011478371",
             "seq": "V-YPTSDVV-E",
@@ -44,7 +39,6 @@
             "name": "Q7XA98_TRIPR/133-141",
             "type": "Protein",
             "start": 133,
-            "svid": "1.0",
             "end": 141,
             "id": "1405185061",
             "seq": "V--PTSDVTIE",
@@ -71,7 +65,6 @@
                 "1856498783",
                 "477931709"
             ],
-            "svid": "1.0",
             "showNonconserved": false,
             "colourScheme": "Zappo",
             "displayBoxes": true
@@ -79,7 +72,6 @@
     ],
     "alignAnnotation": [
         {
-            "svid": "1.0",
             "annotations": [
                 {
                     "displayCharacter": "",
@@ -152,7 +144,6 @@
             "score": 0,
             "sequenceRef": "477931709",
             "featureGroup": "Jalview",
-            "svid": "1.0",
             "description": "1a45",
             "xStart": 5,
             "xEnd": 9,
@@ -163,7 +154,6 @@
             "score": 0,
             "sequenceRef": "1011478371",
             "featureGroup": "Jalview",
-            "svid": "1.0",
             "description": "1a45",
             "xStart": 5,
             "xEnd": 9,
@@ -174,7 +164,6 @@
             "score": 0,
             "sequenceRef": "1405185061",
             "featureGroup": "Jalview",
-            "svid": "1.0",
             "description": "1a45",
             "xStart": 5,
             "xEnd": 9,

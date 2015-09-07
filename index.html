@@ -30,7 +30,7 @@
 BioJSON Version 1.0 is a JavaScript Object Notation (<a href="http://json.org/">JSON</a>) specification for the representation and exchange of single multiple sequence alignments (MSAs) with their annotations, features, groups, hidden sequences, hidden columns and colour schemes. It also allows custom application settings to be encoded for the Jalview (<a href="http://www.jalview.org">www.jalview.org</a>) multiple alignment workbench. 
 
 <p>
-Future versions of BioJSON will provide more complete support for the interchange of multiple alignment data and associated metadata. It will also introduce new representations for phylogenetic data and three-dimensional structures.
+Future versions of BioJSON will provide more complete support for the interchange of multiple alignment data and associated metadata. It will also introduce new representations for phylogenetic data.
 
 <p>
 Although Version 1.0 is specific to multiple sequence alignments, we think BioJSON could be extended to allow mobile, web-based and standalone bioinformatics applications of many types to easily exchange data and three-dimensional structures.
@@ -53,13 +53,70 @@ Future versions of BioJSON will provide more complete support for the interchang
 
 
 <h3> BioJSON v1 UML Diagram</h3>
+
+<p>The UML diagram below illustrates the overall structure of a BioJSON document. The minimal component of a BioJSON document is a single "Sequence" with all compulsory fields completed. Compulsory fields are marked with asterisks (<font color="red">*</font>) in the UML model.</p> 
+
+
+<p>A Sequence may include SequenceFeatures that define sequence specific annotations. For example phosphorylation sites, ferredoxin sites, etc. The snippet below shows a BioJSON SequenceFeature representation for a phosphorylation site. 
+
+<pre><code>{
+    "fillColor": "#ffffff",
+    "score": 0,
+    "sequenceRef": "1699378708",
+    "featureGroup": "netphos",
+    "description": "High confidence server. Only hits with scores over 0.8 are reported.",
+    "links": [
+        "PHOSPHORYLATION (S) 38_38|http://www.cbs.dtu.dk/cgi-bin/proview/webface-link?seqid=Q93XJ9&amp;service=NetPhos-2.0"
+    ],
+    "xStart": 46,
+    "xEnd": 47,
+    "type": "PHOSPHORYLATION (S)"
+}</pre></code>
+</p>
+
+<p>An Alignment is made up of an array of Sequences that may optionally include permitted gap characters. Given an alignment of two or more sequences an AlignmentAnnotation describes an annotation that applies to the complete alignment. This might be a profile or text-based annotation that defines the "state" of each position in the alignment.  
+</p>
+
+<p>SequenceGroups can be defined for an alignment - these are rectangular regions bounded by startRes and endRes positions in the alignment coordinate system for a set of sequences. The snippet below is an example BioJSON object for a SequenceGroup.
+<pre><code>{
+    "displayText": true,
+    "sequenceRefs": [
+        "35272964",
+        "1463982249",
+        "352516542",
+        "2017195779",
+        "935935690",
+        "1403030731",
+        "1464266229",
+        "1954867795",
+        "14155760",
+        "619576438",
+        "1515791936",
+        "71516988",
+        "1807988066",
+        "1758840270",
+        "872325958"
+    ],
+    "startRes": 59,
+    "groupName": "ferredoxin",
+    "endRes": 124,
+    "colourText": false,
+    "showNonconserved": false,
+    "colourScheme": "Zappo",
+    "displayBoxes": true
+}</pre></code>
+</p>
+
+<p>AppSettings stores key=value pairs of custom application specific settings (i.e visualisation settings, etc) for different applications that consume or generate BioJSON.
+</p>
 <img src="biojson_uml_big.png" alt="BioJSON UML" width="100%" height="100%">
 <p>Some UML notations and their meanings</p>
 <ul>
+    <li>&emsp;&ensp;1 &#8594; only one </li>  
     <li>0..1 &#8594; zero or one </li>
     <li>0..* &#8594; zero or many </li>
     <li>1..1 &#8594; one to one </li>
-    <li>1..* &#8594; one or many </li>
+    <li>1..* &#8594; one or many </li>  
 </ul>
 
 <h3>
@@ -70,7 +127,7 @@ BioJSON is specified using version 4 of the <a href="http://json-schema.org/">js
 
 
 <p><a href="javascript:toggle_visibility('accordion-content');">Instructions for interacting with the Docson schema</a></p>
- <div id="accordion-content" style="display:none">
+ <div id="accordion-content" style="display:block">
 <ul>
    <li>When the mouse is hovered over the elements in the BioJSON schema section, traversable elements become highlighted and clickable</li>
    <li>Click an object’s “object” button to expand it, or the plus “+” link to expand all objects</li>
@@ -83,11 +140,15 @@ BioJSON is specified using version 4 of the <a href="http://json-schema.org/">js
 <p>
 <div id="doc"></div> 
 </p>
-<h3>Colour schemes </h3>
-<p>The following colour schemes were referenced in BioJSON schema. Click on any of them to view more detail informations about the scheme. 
+<h3 id="colourScheme">Colour schemes </h3>
+
+<p>More details of the following colour schemes referenced in BioJSON can be explored by clicking on it. 
+<p>The following colour schemes where referenced in BioJSON schema. Click on any of them to view more detail informations about the scheme. 
+<p>Click any of the following colour scheme referenced in BioJSON to view a more detailed information about it.
+
 <table>
 <tr>
-<td width=50%> <a href="http://www.jalview.org/help/html/colourSchemes/pid.html">% Identity</a></td><td width=50%> <a href="http://www.jalview.org/help/html/colourSchemes/purinepyrimidine.html">Purine /Pyrimidine</a></td>
+<td width="50%"> <a href="http://www.jalview.org/help/html/colourSchemes/pid.html">% Identity</a></td><td width="50%"> <a href="http://www.jalview.org/help/html/colourSchemes/purinepyrimidine.html">Purine /Pyrimidine</a></td>
 </tr><tr>
 <td> <a href="http://www.jalview.org/help/html/colourSchemes/blosum.html">Blosum62</a></td><td> <a href="http://www.jalview.org/help/html/colourSchemes/rnahelicesColouring.html">RNA Helices</a></td>
 </tr><tr>
@@ -344,7 +405,7 @@ Some of the future applications of BioJSON include:
     require.config({ baseUrl: ""});
     require(["docson", "lib/jquery"], function(docson) {
         $(function() {  
-            var schema = {"type":"object","description":"A specification for the representation and exchange of bioinformatics data","title":"BioJSON","properties":{"alignAnnotation":{"type":"array","items":{"type":"object","properties":{"annotations":{"type":"array","items":{"type":"object","properties":{"description":{"type":"string","description":"Description for the annotation"},"displayCharacter":{"type":"string","description":"Display character for the given annotation"},"secondaryStructure":{"type":"string","description":"Determines what is rendered for the secondary </br>structure <ul><li>‘E’ - indicates Beta Sheet/Strand <li>‘H’ - indicates alpha helix </li><li> ‘\\u0000’ - indicates blank</li></ul></br>For RNA Helix: <ul><li> ‘(’ - indicates bases pair with columns upstream</br> (to right) </li><li> ‘)’ - indicate region pairs with bases to the left</li></ul>","enum":["E","H","\u0000",")","("]},"value":{"type":"number","description":"Value of the annotation"}},"required":["secondaryStructure"]}},"description":{"type":"string","description":"Description for the Alignment Annotation"},"label":{"type":"string","description":"Label for the Alignment Annotation"},"svid":{"type":"string","description":"Serial version id for the alignAnnotation object model"}},"required":["svid"]},"description":"Alignment annotations stores symbols and graphs usually rendered </br>below the alignment.","exclusiveMaximum":true,"maxItems":2147483647},"appSettings":{"type":"object","properties":{"":{"type":"object"},"isEmpty":{"type":"boolean"}},"description":"This is an array of key=value pairs for storing custom application <br>specific settings","maxItems":1},"colourScheme":{"type":"string","description":"The <a href=\"colour_schemes.html\">Colour Scheme</a> applied to the alignment","enum":["None","User Defined","Clustal","Zappo","Taylor","Nucleotide","Pyrimidine","Purine","Turn","Helix","Strand","Buried","Hydro","T-Coffee Scores","RNA Interaction type","Blosum62","RNA Helices","% Identity"]},"seqFeatures":{"type":"array","items":{"type":"object","properties":{"description":{"type":"string","description":"Description for the feature"},"featureGroup":{"type":"string","description":"Feature group"},"fillColor":{"type":"string","description":"Fill colour"},"links":{"type":"array","items":{"type":"string"},"description":"URL links associated to the feature"},"otherDetails":{"type":"object","properties":{"":{"type":"object"},"isEmpty":{"type":"boolean"}},"description":"Additional metadata for the feature"},"score":{"type":"number","description":"Score"},"sequenceRef":{"type":"string","description":"Reference to the sequence in the alignment<br> (more like a foreign key)","minItems":1,"maxItems":2147483647},"svid":{"type":"string","description":"Serial version id for the <b>SeqFeature</b> object"},"type":{"type":"string","description":"The name or type of the SequenceFeature"},"xEnd":{"type":"integer","description":"End residue position for the sequence feature"},"xStart":{"type":"integer","description":"Start residue position for the sequence feature"}},"required":["featureGroup","sequenceRef","svid","type","xEnd","xStart"]},"description":"Sequence features are associated with sequences rather than <br>alignments. A sequence feature can span across multiple <br>sequences in an alignment. They indicate features generated <br>by the same analysis process or retrieved from the same database <br>(such as Uniprot features).","maxItems":2147483647},"seqGroups":{"type":"array","items":{"type":"object","properties":{"colourScheme":{"type":"string","description":"The <a href=\"colour_schemes.html\">Colour Scheme</a> applied to the Sequence Group"},"description":{"type":"string","description":"Serial version identifier for the <b>seqGroup</b> object model"},"endRes":{"type":"integer","description":"The index of the group’s last residue in the alignment space"},"groupName":{"type":"string","description":"The name assigned to the seqGroup"},"sequenceRefs":{"type":"array","items":{"type":"string"},"description":"An array of the unique id's for the sequences belonging to the group","uniqueItems":true,"minItems":1,"maxItems":2147483647},"startRes":{"type":"integer","description":"The index of the group’s first residue in the alignment space"},"svid":{"type":"string","description":"Serial version identifier for the <b>seqGroup</b> object model"},"colourText":{"type":"boolean","description":"Determines if the residues text for the group is coloured"},"displayBoxes":{"type":"boolean","description":"Determines if the seqGroup border should be visible or not"},"displayText":{"type":"boolean","description":"Determines if the texts of the group is displayed or not"},"showNonconserved":{"type":"boolean","description":"Boolean value indicating whether residues should only be shown <br/>that are different from current reference or consensus sequence"}},"required":["endRes","groupName","sequenceRefs","startRes","svid"]},"description":"A sequence group is a region of an alignment which could <br>span across multiple columns and rows. These can be treated as<br> a sub-alignments.","maxItems":2147483647},"seqs":{"type":"array","items":{"type":"object","properties":{"end":{"type":"integer","description":"The index of the sequence’s last residue in its source database, <br>using a one-based numbering index system"},"id":{"type":"string","description":"Unique identifier for a given Sequence"},"name":{"type":"string","description":"Sequence name"},"order":{"type":"integer","description":"The order/position of a sequence in the alignment space"},"seq":{"type":"string","description":"A sequence is a succession of letters that indicate the order<br>of residues within a protein or nucleotides within a DNA <br>(using GACT) or RNA (GACU) molecule. An aligned sequence<br>may contain one of the following gap characters “.”, “-” or “ ”","minLength":3,"maxLength":2147483647},"start":{"type":"integer","description":"The index of the sequence’s first residue in its source database, <br>using a one-based numbering index system"},"svid":{"type":"string","description":"Serial version identifier for the <b>seqs</b> object model"},"type":{"type":"string","description":"Sequence type","enum":["DNA","RNA","Protein"]}},"required":["end","id","name","seq","start","svid"]},"description":"An array of Sequences which makes up the Alignment","minItems":1},"svid":{"type":"string","description":"Serial version identifier for <b>BioJSON</b> schema"}},"required":["appSettings","seqs","svid"],"$schema":"http://json-schema.org/draft-04/schema#"}
+            var schema = {"type":"object","description":"A specification for the representation and exchange of bioinformatics data","title":"BioJSON","properties":{"alignAnnotation":{"type":"array","items":{"type":"object","properties":{"annotations":{"type":"array","items":{"type":"object","properties":{"description":{"type":"string","description":"Description for the annotation"},"displayCharacter":{"type":"string","description":"Display character for the given annotation"},"secondaryStructure":{"type":"string","description":"Determines what is rendered for the secondary </br>structure <ul><li>‘E’ - indicates Beta Sheet/Strand <li>‘H’ - indicates alpha helix </li><li> ‘\\u0000’ - indicates blank</li></ul></br>For RNA Helix: <ul><li> ‘(’ - indicates bases pair with columns upstream</br> (to right) </li><li> ‘)’ - indicate region pairs with bases to the left</li></ul>","enum":["E","H","\u0000",")","("]},"value":{"type":"number","description":"Value of the annotation"}},"required":["secondaryStructure"]}},"description":{"type":"string","description":"Description for the Alignment Annotation"},"label":{"type":"string","description":"Label for the Alignment Annotation"}}},"description":"Alignment annotations stores symbols and graphs usually rendered </br>below the alignment and often reflect properties of the alignment </br>as a whole.","exclusiveMaximum":true},"appSettings":{"type":"object","properties":{"":{"type":"object"},"isEmpty":{"type":"boolean"}},"description":"AppSettings stores key=value pairs of custom application specific <br>settings (i.e visualisation settings, etc) for different applications<br>that consume or generate BioJSON","maxItems":0},"colourScheme":{"type":"string","description":"The <a href=\"#colourScheme\">Colour Scheme</a> applied to the alignment","enum":["None","User Defined","Clustal","Zappo","Taylor","Nucleotide","Pyrimidine","Purine","Turn","Helix","Strand","Buried","Hydro","T-Coffee Scores","RNA Interaction type","Blosum62","RNA Helices","% Identity"]},"seqFeatures":{"type":"array","items":{"type":"object","properties":{"description":{"type":"string","description":"Description for the feature"},"featureGroup":{"type":"string","description":"Feature group"},"fillColor":{"type":"string","description":"Fill colour"},"links":{"type":"array","items":{"type":"string"},"description":"URL links associated to the feature"},"otherDetails":{"type":"object","properties":{"":{"type":"object"},"isEmpty":{"type":"boolean"}},"description":"Additional metadata for the feature"},"score":{"type":"number","description":"Score"},"sequenceRef":{"type":"string","description":"Reference to the sequence in the alignment<br> (more like a foreign key)","minItems":1,"maxItems":2147483647},"type":{"type":"string","description":"The name or type of the SequenceFeature"},"xEnd":{"type":"integer","description":"End residue position for the sequence feature"},"xStart":{"type":"integer","description":"Start residue position for the sequence feature"}},"required":["featureGroup","sequenceRef","type","xEnd","xStart"]},"description":"Sequence features are properties of the individual sequences, <br>they do not change with the alignment, but are shown mapped<br> on to specific residues within the alignment"},"seqGroups":{"type":"array","items":{"type":"object","properties":{"colourScheme":{"type":"string","description":"The <a href=\"#colourScheme\">Colour Scheme</a> applied to the Sequence Group"},"description":{"type":"string","description":"Serial version identifier for the <b>seqGroup</b> object model"},"endRes":{"type":"integer","description":"The index of the group’s last residue in the alignment space"},"groupName":{"type":"string","description":"The name assigned to the seqGroup"},"sequenceRefs":{"type":"array","items":{"type":"string"},"description":"An array of the unique id's for the sequences belonging to the group","uniqueItems":true,"minItems":1},"startRes":{"type":"integer","description":"The index of the group’s first residue in the alignment space"},"colourText":{"type":"boolean","description":"Determines if the residues text for the group is coloured"},"displayBoxes":{"type":"boolean","description":"Determines if the seqGroup border should be visible or not"},"displayText":{"type":"boolean","description":"Determines if the texts of the group is displayed or not"},"showNonconserved":{"type":"boolean","description":"Boolean value indicating whether residues should only be shown <br/>that are different from current reference or consensus sequence"}},"required":["endRes","groupName","sequenceRefs","startRes"]},"description":"A sequence group is a rectangular region of an alignment <br>bounded by startRes and endRes positions in the alignment <br>coordinate system for a set of sequences"},"seqs":{"type":"array","items":{"type":"object","properties":{"end":{"type":"integer","description":"The index of the sequence’s last residue in its source database, <br>using a one-based numbering index system"},"id":{"type":"string","description":"Unique identifier for a given Sequence"},"name":{"type":"string","description":"Sequence name"},"order":{"type":"integer","description":"The order/position of a sequence in the alignment space"},"seq":{"type":"string","description":"Sequence residue characters. An aligned sequence may contain <br>one of the following gap characters “.”, “-” or “ ”","minLength":3,"maxLength":2147483647},"start":{"type":"integer","description":"The index of the sequence’s first residue in its source database, <br>using a one-based numbering index system"},"type":{"type":"string","description":"Sequence type","enum":["DNA","RNA","Protein"]}},"required":["end","id","name","seq","start"]},"description":"An array of Sequences which makes up the Alignment","minItems":1},"svid":{"type":"string","description":"Serial version identifier for <b>BioJSON</b> schema"}},"required":["appSettings","seqs","svid"],"$schema":"http://json-schema.org/draft-04/schema#"}
             docson.templateBaseUrl="templates";
             docson.doc("doc", schema);
         });

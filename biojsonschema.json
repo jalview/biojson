@@ -49,19 +49,11 @@
                     "label": {
                         "type": "string",
                         "description": "Label for the Alignment Annotation"
-                    },
-                    "svid": {
-                        "type": "string",
-                        "description": "Serial version id for the alignAnnotation object model"
                     }
-                },
-                "required": [
-                    "svid"
-                ]
+                }
             },
-            "description": "Alignment annotations stores symbols and graphs usually rendered </br>below the alignment.",
-            "exclusiveMaximum": true,
-            "maxItems": 2147483647
+            "description": "Alignment annotations stores symbols and graphs usually rendered </br>below the alignment and often reflect properties of the alignment </br>as a whole.",
+            "exclusiveMaximum": true
         },
         "appSettings": {
             "type": "object",
@@ -73,12 +65,12 @@
                     "type": "boolean"
                 }
             },
-            "description": "This is an array of key=value pairs for storing custom application <br>specific settings",
-            "maxItems": 1
+            "description": "AppSettings stores key=value pairs of custom application specific <br>settings (i.e visualisation settings, etc) for different applications<br>that consume or generate BioJSON",
+            "maxItems": 0
         },
         "colourScheme": {
             "type": "string",
-            "description": "The <a href=\"colour_schemes.html\">Colour Scheme</a> applied to the alignment",
+            "description": "The <a href=\"#colourScheme\">Colour Scheme</a> applied to the alignment",
             "enum": [
                 "None",
                 "User Defined",
@@ -146,10 +138,6 @@
                         "minItems": 1,
                         "maxItems": 2147483647
                     },
-                    "svid": {
-                        "type": "string",
-                        "description": "Serial version id for the <b>SeqFeature</b> object"
-                    },
                     "type": {
                         "type": "string",
                         "description": "The name or type of the SequenceFeature"
@@ -166,14 +154,12 @@
                 "required": [
                     "featureGroup",
                     "sequenceRef",
-                    "svid",
                     "type",
                     "xEnd",
                     "xStart"
                 ]
             },
-            "description": "Sequence features are associated with sequences rather than <br>alignments. A sequence feature can span across multiple <br>sequences in an alignment. They indicate features generated <br>by the same analysis process or retrieved from the same database <br>(such as Uniprot features).",
-            "maxItems": 2147483647
+            "description": "Sequence features are properties of the individual sequences, <br>they do not change with the alignment, but are shown mapped<br> on to specific residues within the alignment"
         },
         "seqGroups": {
             "type": "array",
@@ -182,7 +168,7 @@
                 "properties": {
                     "colourScheme": {
                         "type": "string",
-                        "description": "The <a href=\"colour_schemes.html\">Colour Scheme</a> applied to the Sequence Group"
+                        "description": "The <a href=\"#colourScheme\">Colour Scheme</a> applied to the Sequence Group"
                     },
                     "description": {
                         "type": "string",
@@ -203,16 +189,11 @@
                         },
                         "description": "An array of the unique id's for the sequences belonging to the group",
                         "uniqueItems": true,
-                        "minItems": 1,
-                        "maxItems": 2147483647
+                        "minItems": 1
                     },
                     "startRes": {
                         "type": "integer",
                         "description": "The index of the group’s first residue in the alignment space"
-                    },
-                    "svid": {
-                        "type": "string",
-                        "description": "Serial version identifier for the <b>seqGroup</b> object model"
                     },
                     "colourText": {
                         "type": "boolean",
@@ -235,12 +216,10 @@
                     "endRes",
                     "groupName",
                     "sequenceRefs",
-                    "startRes",
-                    "svid"
+                    "startRes"
                 ]
             },
-            "description": "A sequence group is a region of an alignment which could <br>span across multiple columns and rows. These can be treated as<br> a sub-alignments.",
-            "maxItems": 2147483647
+            "description": "A sequence group is a rectangular region of an alignment <br>bounded by startRes and endRes positions in the alignment <br>coordinate system for a set of sequences"
         },
         "seqs": {
             "type": "array",
@@ -265,17 +244,13 @@
                     },
                     "seq": {
                         "type": "string",
-                        "description": "A sequence is a succession of letters that indicate the order<br>of residues within a protein or nucleotides within a DNA <br>(using GACT) or RNA (GACU) molecule. An aligned sequence may contain <br>one of the following gap characters “.”, “-” or “ ”",
+                        "description": "Sequence residue characters. An aligned sequence may contain <br>one of the following gap characters “.”, “-” or “ ”",
                         "minLength": 3,
                         "maxLength": 2147483647
                     },
                     "start": {
                         "type": "integer",
                         "description": "The index of the sequence’s first residue in its source database, <br>using a one-based numbering index system"
-                    },
-                    "svid": {
-                        "type": "string",
-                        "description": "Serial version identifier for the <b>seqs</b> object model"
                     },
                     "type": {
                         "type": "string",
@@ -292,8 +267,7 @@
                     "id",
                     "name",
                     "seq",
-                    "start",
-                    "svid"
+                    "start"
                 ]
             },
             "description": "An array of Sequences which makes up the Alignment",
