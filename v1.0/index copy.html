@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://tcofoegbu.github.io/bjs-template/ -->
+<html lang="en-us">
+<head>
+    <title>BioJSON Format Documentation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>BioJSON by tcofoegbu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./BioJSON_files/normalize.css" media="screen">
+    <link href="./BioJSON_files/css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="./BioJSON_files/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="./BioJSON_files/github-light.css" media="screen">
+    <link rel="stylesheet" href="css/docson.css">
+    <script src="lib/require.js"></script>
+  <style type="text/css"></style>
+</head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">BioJSON</h1>
+      <h2 class="project-tagline"></h2>
+      <a href="https://github.com/tcofoegbu/bjs-template" class="btn">View on GitHub</a>
+      <a href="https://github.com/tcofoegbu/bjs-template/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/tcofoegbu/bjs-template/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h3>
+<a id="welcome-to-biojson-community-site" class="anchor" href="http://tcofoegbu.github.io/bjs-template/#welcome-to-biojson-community-site" aria-hidden="true"><span class="octicon octicon-link"></span></a>Welcome to BioJSON community site.</h3>
+<p align="justify">
+BioJSON was introduced in Jalview 2.9 to serve as a standard JavaScript Object Notation (JSON) model for representing/ exchanging Bioinformatics alignment data. This is the first version of the specification and we welcome all feedbacks to make BioJSON more standardised, sustainable and widely adopted worldwide. <!—The BioJSON schema content section was created with Docson - a  resource which uses a JSON schema to generate a beautified and interactive documentation.—>
+</p>
+<h3>
+
+<a id="feature-plans" class="anchor" href="http://tcofoegbu.github.io/bjs-template/#feature-plans" aria-hidden="true"><span class="octicon octicon-link"></span></a>BioJSON Vision</h3>
+<p align="justify">Our vision is to arrive at a point where any alignment data represented in JSON conforms to the BioJSON specifications.</p>
+
+<h3>Advantages of JSON/BioJSON</h3>
+<ul>
+   <li>BioJSON can represent very sophisticated sequence alignments along with their linked-data better than most Bioinformatics data format</li>
+   <li>BioJSON can be easily embedded in HTML pages and some image formats</li>
+   <li>BioJSON is based on JSON which is very popular and can be parsed in almost all programming languages</li>
+   <li>Integrates seamlessly with the HTTP rest architecture</li>
+   <li>Very light weight, self describing and easy to understand</li>
+   <li>JSON format is text only and uses JavaScript syntax</li>
+   <li>JSON is hierarchical (i.e. it can contain values within values)</li>
+</ul>
+<p align="justify">More information about JSON can be found at <a href="http://json.org/">http://json.org/</a>.</p>
+
+<p align="justify">BioJSON can currently represent any sequence alignment data along with its annotations, features, groups, hidden sequences, hidden columns, colour schemes, and custom application settings. However phylogenetic trees, structures and more sophisticated annotations are not yet supported but will gradually be introduced in future versions of BioJSON.</p>
+
+
+<h3> BioJSON UML Diagram</h3>
+<img src="biojson_uml_big.png" alt="BioJSON UML" width="100%" height="100%">
+
+
+<h3>
+<a id="support-or-contact" class="anchor" href="http://tcofoegbu.github.io/bjs-template/#main-content" aria-hidden="true"><span class="octicon octicon-link"></span></a>The BioJSON Schema</h3>
+<ul align="justify">
+   <li>When the mouse is hovered over the elements in the BioJSON schema section, traversable elements become highlighted and clickable</li>
+   <li>Click the “object” button or the plus “+” link to expand an object</li>
+   <li>Click the minus “-” to collapse an object </li>
+   <li>Click the parenthesis “{}” link to view the JSON schema which provides a more technical description of the data</li>
+   <li>When you expand an object the following information becomes visible: The variables in the object, their data types and the description of each variable. This exactly corresponds to how it appears in BioJSON</li>
+</ul>
+
+<p>
+<div id="doc"></div>  
+</p> 
+
+<p>Downloads: <a href="biojsonschema.json" target="_blank" download>BioJSON schema</a> | <a href="example_biojsons.json" target="_blank" download>Sample BioJSON</a></p>
+
+
+
+
+<h3>
+<a id="sample-biojson" class="anchor" href="http://tcofoegbu.github.io/bjs-template/#sample-biojson" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample BioJSON data</h3>
+
+<pre><code>
+{
+    "seqs": [
+        {
+            "name": "FER_CAPAN/125-135",
+            "start": 125,
+            "svid": "1.0",
+            "end": 135,
+            "id": "1841182323",
+            "seq": "VAYPQSDVTIE",
+            "order": 1
+        },
+        {
+            "name": "FER1_SOLLC/125-135",
+            "start": 125,
+            "svid": "1.0",
+            "end": 135,
+            "id": "1827803677",
+            "seq": "VAYPKGDVTIE",
+            "order": 2
+        },
+        {
+            "name": "Q93XJ9_SOLTU/125-135",
+            "start": 125,
+            "svid": "1.0",
+            "end": 135,
+            "id": "246218698",
+            "seq": "VAYPKCDVTIE",
+            "order": 3
+        },
+        {
+            "name": "FER1_PEA/130-140",
+            "start": 130,
+            "svid": "1.0",
+            "end": 140,
+            "id": "320593394",
+            "seq": "VAYPTSDVVIE",
+            "order": 4
+        },
+        {
+            "name": "Q7XA98_TRIPR/133-143",
+            "start": 133,
+            "svid": "1.0",
+            "end": 143,
+            "id": "252345420",
+            "seq": "VAFPTSDVTIE",
+            "order": 5
+        }
+    ],
+    "seqGroups": [
+        {
+            "displayText": true,
+            "startRes": 2,
+            "groupName": "JGroup:48822124",
+            "endRes": 4,
+            "colourText": false,
+            "seqsHash": [
+                "1841182323",
+                "246218698"
+            ],
+            "svid": "1.0",
+            "showNonconserved": false,
+            "colourScheme": "Zappo",
+            "displayBoxes": true
+        }
+    ],
+    "alignAnnotation": [
+        {
+            "svid": "1.0",
+            "annotations": [
+                {
+                    "displayCharacter": "",
+                    "value": 0,
+                    "secondaryStructure": "\u0000"
+                },
+                {
+                    "displayCharacter": "",
+                    "value": 0,
+                    "secondaryStructure": "\u0000"
+                },
+                {
+                    "displayCharacter": "",
+                    "value": 0,
+                    "secondaryStructure": "\u0000"
+                },
+                {
+                    "description": "",
+                    "displayCharacter": "β",
+                    "value": 0,
+                    "secondaryStructure": "E"
+                },
+                {
+                    "description": "",
+                    "displayCharacter": "β",
+                    "value": 0,
+                    "secondaryStructure": "E"
+                },
+                {
+                    "displayCharacter": "",
+                    "value": 0,
+                    "secondaryStructure": "\u0000"
+                },
+                {
+                    "description": "",
+                    "displayCharacter": "α",
+                    "value": 0,
+                    "secondaryStructure": "H"
+                },
+                {
+                    "description": "",
+                    "displayCharacter": "α",
+                    "value": 0,
+                    "secondaryStructure": "H"
+                },
+                {
+                    "displayCharacter": "",
+                    "value": 0,
+                    "secondaryStructure": "\u0000"
+                },
+                {
+                    "displayCharacter": "",
+                    "value": 0,
+                    "secondaryStructure": "\u0000"
+                },
+                {
+                    "displayCharacter": "",
+                    "value": 0,
+                    "secondaryStructure": "\u0000"
+                }
+            ],
+            "description": "Secondary Structure",
+            "label": "Secondary Structure"
+        }
+    ],
+    "seqFeatures": [
+        {
+            "fillColor": "#c13516",
+            "score": 0,
+            "sequenceRef": "246218698",
+            "featureGroup": "Jalview",
+            "svid": "1.0",
+            "description": "feature description",
+            "xStart": 5,
+            "xEnd": 9,
+            "type": "feature"
+        },
+        {
+            "fillColor": "#c13516",
+            "score": 0,
+            "sequenceRef": "320593394",
+            "featureGroup": "Jalview",
+            "svid": "1.0",
+            "description": "feature description",
+            "xStart": 5,
+            "xEnd": 9,
+            "type": "feature"
+        },
+        {
+            "fillColor": "#c13516",
+            "score": 0,
+            "sequenceRef": "252345420",
+            "featureGroup": "Jalview",
+            "svid": "1.0",
+            "description": "feature description",
+            "xStart": 5,
+            "xEnd": 9,
+            "type": "feature"
+        }
+    ],
+    "appSettings": {
+        "globalColorScheme": "foo",
+        "webStartUrl": "www.jalview.org/services/launchApp",
+        "application": "Jalview",
+        "hiddenSeqs": "1827803677",
+        "showSeqFeatures": "true",
+        "version": "2.9",
+        "hiddenCols": "0-0;10-10"
+    },
+    "svid": "1.0"
+}
+</code></pre>
+
+
+<h3>See BioJSON in Action!</h3>
+The current application of BioJSON in Jalview 2.9 includes:
+<ul>
+   <li>Export/ import of alignment to/from a JSON flat file</li>
+   <li>Embedding an alignment in HTML (File &#8594; Export Image &#8594; HTML)</li>
+   <li>Embedding an alignment in BioJS MSA viewer (File &#8594; Export Image &#8594; BioJS)</li>
+   <li>Retrieval of embedded alignment data from HTML/BioJS files (Drag and drop file in Jalview)</li>
+</ul>
+
+Future applications of BioJSON in Jalview:
+<ul>
+   <li>Primary data protocol for Jalview web services (JalviewWS)</li>
+   <li>Primary data protocol for the Javascript version of Jalview (JalviewJS)</li>
+   <li>Storage of linked alignments (i.e. CDNA/Protein alignments)</li>
+</ul>
+
+
+
+<h3>
+<a id="authors-and-contributors" class="anchor" href="http://tcofoegbu.github.io/bjs-template/#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<p align="justify">Tochukwu Charles Ofoegbu, Jim Procter and Geoff Barton.</p>
+<p align="justify">If you wish to contribute please get in touch with <a href="mailto:jalviewdiscuss@jalview.org">The Jalview Team</a></p>
+
+
+<footer class="site-footer">
+   <span class="site-footer-owner"><a href="https://github.com/tcofoegbu/bjs-template">BioJSON</a> is maintained by <a href="#">The Jalview Team</a>.</span>
+      <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com/">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+</section>
+ 
+
+
+<script charset="utf-8">
+    require.config({ baseUrl: ""});
+    require(["docson", "lib/jquery"], function(docson) {
+        $(function() {
+            var schema =
+            {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "BioJSON Schema",
+    "type": "object",
+    "properties": {
+        "seqs": {
+            "id": "seqs",
+            "type": "array",
+            "items": {
+                "id": "seqs",
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "id": "seqs/name",
+                        "type": "string",
+                        "description": "Sequence name"
+                    },
+                    "start": {
+                        "id": "seqs/start",
+                        "type": "integer",
+                        "description": "The index of the sequence’s first residue in it’s source database"
+                    },
+                    "end": {
+                        "id": "seqs/end",
+                        "type": "integer",
+                        "description": "The index of the sequence’s last residue in it’s source database"
+                    },
+                    "order": {
+                        "id": "seqs/order",
+                        "type": "integer",
+                        "description": "The order/position of a sequence in the alignment space"
+                    },
+                    "id": {
+                        "id": "seqs/id",
+                        "type": "string",
+                        "description": "Unique identifier for a given Sequence"
+                    },
+                    "seq": {
+                        "id": "seqs/seq",
+                        "type": "string",
+                        "description": "Sequence Residues"
+                    },
+                    "svid": {
+                        "id": "seqs/svid",
+                        "type": "string",
+                        "description": "Serial version identifier for the <b>seqs</b> object model"
+                    }
+                },
+                "required": [
+                    "name",
+                    "start",
+                    "svid",
+                    "end",
+                    "id",
+                    "seq"
+                ]
+            },
+            "required": [
+                "0"
+            ],
+            "description": "An array of Sequences which makes up the Alignment",
+            "minItems": "1",
+            "maxItems": "*"
+        },
+        "seqGroups": {
+            "id": "seqGroups",
+            "type": "array",
+            "items": [
+                {
+                    "id": "seqGroups",
+                    "type": "object",
+                    "properties": {
+                        "groupName": {
+                            "id": "seqGroups/groupName",
+                            "type": "string",
+                            "description": "The name assigned to the seqGroup"
+                        },
+                        "startRes": {
+                            "id": "seqGroups/startRes",
+                            "type": "integer",
+                            "description": "The index of the group’s first residue in the alignment space"
+                        },
+                        "endRes": {
+                            "id": "seqGroups/endRes",
+                            "type": "integer",
+                            "description": "The index of the group’s last residue in the alignment space"
+                        },
+                        "svid": {
+                            "id": "seqGroups/svid",
+                            "type": "string",
+                            "description": "Serial version identifier for the <b>seqGroup</b> object model"
+                        },
+                        "colourScheme": {
+                            "id": "seqGroups/colourScheme",
+                            "type": "string",
+                            "description": "The Colour Scheme applied to the Sequence Group"
+                        },
+                        "displayBoxes": {
+                            "id": "seqGroups/displayBoxes",
+                            "type": "boolean",
+                            "description": "Determines if the seqGroup border should be visible or not"
+                        },
+                        "showNonconserved": {
+                            "id": "seqGroups/showNonconserved",
+                            "type": "boolean",
+                            "description": "Determines if non conserved regions of a group is shown or not"
+                        },
+                        "colourText": {
+                            "id": "seqGroups/colourText",
+                            "type": "boolean",
+                            "description": "Determines if the Residues text for the group is coloured"
+                        },
+                        "displayText": {
+                            "id": "seqGroups/displayText",
+                            "type": "boolean",
+                            "description": "Determines if the texts of the group is displayed or not"
+                        },
+                        "seqsHash": {
+                            "id": "seqGroups/seqsHash",
+                            "type": "array",
+                            "items": [],
+                            "minItems": "0",
+                            "maxItems": "*",
+                            "description": "An array of the unique id's for the sequences belonging to the group"
+                        }
+                    }
+                }
+            ],
+            "description": "Sequence groups in the Alignment",
+            "minItems": "0",
+            "maxItems": "*"
+        },
+        "alignAnnotation": {
+            "id": "alignAnnotation",
+            "type": "array",
+            "items": {
+                "id": "alignAnnotation",
+                "type": "object",
+                "properties": {
+                    "svid": {
+                        "id": "alignAnnotation/svid",
+                        "type": "string",
+                        "description": "Serial version id for the <b>alignAnnotation</b> object model"
+                    },
+                    "description": {
+                        "id": "alignAnnotation/description",
+                        "type": "string",
+                        "description": "Description for the Alignment Annotation"
+                    },
+                    "label": {
+                        "id": "alignAnnotation/label",
+                        "type": "string",
+                        "description": "Label for the Alignment Annotation"
+                    },
+                    "annotations": {
+                        "id": "alignAnnotation/annotations",
+                        "type": "array",
+                        "items": [
+                            {
+                                "id": "alignAnnotation/annotations",
+                                "type": "object",
+                                "properties": {
+                                    "displayCharacter": {
+                                        "id": "alignAnnotation/annotations/displayCharacter",
+                                        "type": "string",
+                                        "description": "Display character which denotes the given annotation"
+                                    },
+                                    "secondaryStructure": {
+                                        "id": "alignAnnotation/annotations/secondaryStructure",
+                                        "type": "string",
+                                        "description": "Secondary structure symbol for the given annotation"
+                                    },
+                                    "value": {
+                                        "id": "alignAnnotation/annotations/value",
+                                        "type": "integer",
+                                        "description": "Value of the annotation"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            "description": "Alignment Annotations",
+            "minItems": "0",
+            "maxItems": "*"
+        },
+        "seqFeatures": {
+            "id": "seqFeatures",
+            "type": "array",
+            "items": {
+                "id": "seqFeatures",
+                "type": "object",
+                "properties": {
+                    "type": {
+                        "id": "seqFeatures/type",
+                        "type": "string",
+                        "description": "The name of the SequenceFeature"
+                    },
+                    "fillColor": {
+                        "id": "seqFeatures/fillColor",
+                        "type": "string",
+                        "description": "Fill colour"
+                    },
+                    "sequenceRef": {
+                        "id": "seqFeatures/sequenceRef",
+                        "type": "string",
+                        "description": "Reference to the Sequence in the alignment (More like a foreign key)"
+                    },
+                    "featureGroup": {
+                        "id": "seqFeatures/featureGroup",
+                        "type": "string",
+                        "description": "Feature Group"
+                    },
+                    "svid": {
+                        "id": "seqFeatures/svid",
+                        "type": "string",
+                        "description": "Serial version id for the <b>SeqFeature</b> object"
+                    },
+                    "description": {
+                        "id": "seqFeatures/description",
+                        "type": "string",
+                        "description": "Description of Feature"
+                    },
+                    "xStart": {
+                        "id": "seqFeatures/xStart",
+                        "type": "integer",
+                        "description": "Start residue position for the sequence feature"
+                    },
+                    "xEnd": {
+                        "id": "seqFeatures/xEnd",
+                        "type": "integer",
+                        "description": "End residue position for the sequence feature"
+                    },
+                    "score": {
+                        "id": "seqFeatures/score",
+                        "type": "integer",
+                        "description": "Score"
+                    }
+                }
+            },
+            "minItems": "0",
+            "maxItems": "*",
+            "description": "Sequence Features within the alignment"
+        },
+        "appSettings": {
+            "id": "appSettings",
+            "type": "object",
+            "properties": {
+                "globalColorScheme": {
+                    "id": "appSettings/globalColorScheme",
+                    "type": "string",
+                    "description": "The Global colour scheme applied to all the sequences within the alignment"
+                },
+                "webStartUrl": {
+                    "id": "appSettings/webStartUrl",
+                    "type": "string",
+                    "description": "Jalview specific setting which points to the url for launching Jalview"
+                },
+                "application": {
+                    "id": "appSettings/application",
+                    "type": "string",
+                    "description": "The name of the application which generated the Json"
+                },
+                "showSeqFeatures": {
+                    "id": "appSettings/showSeqFeatures",
+                    "type": "string",
+                    "description": "Determines if sequence features are visible or not"
+                },
+                "version": {
+                    "id": "appSettings/version",
+                    "type": "string",
+                    "description": "Version of the application which generated the JSON"
+                },
+                "hiddenCols": {
+                    "id": "appSettings/hiddenCols",
+                    "type": "string",
+                    "description": "Hidden alignment column ranges in comma delimited string i.e [2-5, 9-9, 11-12]"
+                }
+            },
+            "description": "This is for custom application specific settings in a hashmap structure (key/value) pairs."
+        },
+        "svid": {
+            "id": "svid",
+            "type": "string",
+            "description": "Serial version identifier for <b>BioJSON</b> model"
+        }
+    },
+    "required": [
+        "seqs",
+        "appSettings",
+        "seqGroups",
+        "alignAnnotation",
+        "svid",
+        "seqFeatures"
+    ]
+}
+            docson.templateBaseUrl="templates";
+            docson.doc("doc", schema);
+        });
+    });
+</script>
+</body>
+</html>

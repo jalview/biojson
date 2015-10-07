@@ -1,0 +1,173 @@
+{"seqs": [
+        {
+            "name": "FER_CAPAN/125-133",
+            "type": "Protein",
+            "start": 125,
+            "end": 133,
+            "id": "1856498783",
+            "seq": "VAYPQS-DV-E",
+            "order": 1
+        },
+        {
+            "name": "FER1_SOLLC/125-133",
+            "type": "Protein",
+            "start": 125,
+            "end": 133,
+            "id": "1603641013",
+            "seq": "VAYPKG-DV-E",
+            "order": 2
+        },
+        {
+            "name": "Q93XJ9_SOLTU/125-134",
+            "type": "Protein",
+            "start": 125,
+            "end": 134,
+            "id": "477931709",
+            "seq": "VAYPKCDVT-E",
+            "order": 3
+        },
+        {
+            "name": "FER1_PEA/130-138",
+            "type": "Protein",
+            "start": 130,
+            "end": 138,
+            "id": "1011478371",
+            "seq": "V-YPTSDVV-E",
+            "order": 4
+        },
+        {
+            "name": "Q7XA98_TRIPR/133-141",
+            "type": "Protein",
+            "start": 133,
+            "end": 141,
+            "id": "1405185061",
+            "seq": "V--PTSDVTIE",
+            "order": 5
+        }
+    ],
+    "appSettings": {
+        "globalColorScheme": "foo",
+        "webStartUrl": "http://www.jalview.org/services/launchApp",
+        "application": "Jalview",
+        "hiddenSeqs": "1603641013",
+        "showSeqFeatures": "true",
+        "version": "Test",
+        "hiddenCols": "0-0;10-10"
+    },
+    "seqGroups": [
+        {
+            "displayText": true,
+            "startRes": 2,
+            "groupName": "JGroup:48822124",
+            "endRes": 4,
+            "colourText": false,
+            "sequenceRefs": [
+                "1856498783",
+                "477931709"
+            ],
+            "showNonconserved": false,
+            "colourScheme": "Zappo",
+            "displayBoxes": true
+        }
+    ],
+    "alignAnnotation": [
+        {
+            "annotations": [
+                {
+                    "displayCharacter": "",
+                    "value": 0,
+                    "secondaryStructure": "\u0000"
+                },
+                {
+                    "displayCharacter": "",
+                    "value": 0,
+                    "secondaryStructure": "\u0000"
+                },
+                {
+                    "displayCharacter": "",
+                    "value": 0,
+                    "secondaryStructure": "\u0000"
+                },
+                {
+                    "description": "",
+                    "displayCharacter": "β",
+                    "value": 0,
+                    "secondaryStructure": "E"
+                },
+                {
+                    "description": "",
+                    "displayCharacter": "β",
+                    "value": 0,
+                    "secondaryStructure": "E"
+                },
+                {
+                    "displayCharacter": "",
+                    "value": 0,
+                    "secondaryStructure": "\u0000"
+                },
+                {
+                    "description": "",
+                    "displayCharacter": "α",
+                    "value": 0,
+                    "secondaryStructure": "H"
+                },
+                {
+                    "description": "",
+                    "displayCharacter": "α",
+                    "value": 0,
+                    "secondaryStructure": "H"
+                },
+                {
+                    "displayCharacter": "",
+                    "value": 0,
+                    "secondaryStructure": "\u0000"
+                },
+                {
+                    "displayCharacter": "",
+                    "value": 0,
+                    "secondaryStructure": "\u0000"
+                },
+                {
+                    "displayCharacter": "",
+                    "value": 0,
+                    "secondaryStructure": "\u0000"
+                }
+            ],
+            "description": "Secondary Structure",
+            "label": "Secondary Structure"
+        }
+    ],
+    "svid": "1.0",
+    "seqFeatures": [
+        {
+            "fillColor": "#8db520",
+            "score": 0,
+            "sequenceRef": "477931709",
+            "featureGroup": "Jalview",
+            "description": "1a45",
+            "xStart": 5,
+            "xEnd": 9,
+            "type": "RESNUM"
+        },
+        {
+            "fillColor": "#8db520",
+            "score": 0,
+            "sequenceRef": "1011478371",
+            "featureGroup": "Jalview",
+            "description": "1a45",
+            "xStart": 5,
+            "xEnd": 9,
+            "type": "RESNUM"
+        },
+        {
+            "fillColor": "#8db520",
+            "score": 0,
+            "sequenceRef": "1405185061",
+            "featureGroup": "Jalview",
+            "description": "1a45",
+            "xStart": 5,
+            "xEnd": 9,
+            "type": "RESNUM"
+        }
+    ]
+}

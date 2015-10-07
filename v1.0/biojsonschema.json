@@ -8,45 +8,11 @@
             "items": {
                 "type": "object",
                 "properties": {
-                    "annotationSettings": {
-                        "type": "object",
-                        "properties": {
-                            "belowAlignment": {
-                                "type": "boolean",
-                                "description": "Indicates if the Annotation is shown below the alignment"
-                            },
-                            "centreColLabels": {
-                                "type": "boolean",
-                                "description": "Indicates if column labels is centred relative to the alignment column"
-                            },
-                            "hasIcon": {
-                                "type": "boolean",
-                                "description": "Indicates if annotation has a graphical symbol track"
-                            },
-                            "scaleColLabel": {
-                                "type": "boolean",
-                                "description": "Indicates if column label is scaled to fit within the alignment column"
-                            },
-                            "showAllColLabels": {
-                                "type": "boolean",
-                                "description": "Indicates if every column label is displayed."
-                            },
-                            "visible": {
-                                "type": "boolean",
-                                "description": "Indicates if the annotation row is visible"
-                            }
-                        },
-                        "description": "Stores display settings for an annotation"
-                    },
                     "annotations": {
                         "type": "array",
                         "items": {
                             "type": "object",
                             "properties": {
-                                "colour": {
-                                    "type": "string",
-                                    "description": "Colour of the annotation position in hex string."
-                                },
                                 "description": {
                                     "type": "string",
                                     "description": "Description for the annotation"
@@ -57,7 +23,7 @@
                                 },
                                 "secondaryStructure": {
                                     "type": "string",
-                                    "description": "Determines what is rendered for the secondary </br>structure <ul><li>’E’ - indicates Beta Sheet/Strand <li>’H’ - indicates alpha helix </li><li> ‘\\u0000’ - indicates blank</li></ul></br>For RNA Helix (only shown when working with</br> nucleotide sequences): <ul><li> ‘(’ - indicates bases pair with columns upstream</br> (to right) </li><li> ’(’ - indicate region pairs with bases to the left</li></ul>",
+                                    "description": "Determines what is rendered for the secondary </br>structure <ul><li>‘E’ - indicates Beta Sheet/Strand <li>‘H’ - indicates alpha helix </li><li> ‘\\u0000’ - indicates blank</li></ul></br>For RNA Helix: <ul><li> ‘(’ - indicates bases pair with columns upstream</br> (to right) </li><li> ‘)’ - indicate region pairs with bases to the left</li></ul>",
                                     "enum": [
                                         "E",
                                         "H",
@@ -76,34 +42,13 @@
                             ]
                         }
                     },
-                    "calcId": {
-                        "type": "string",
-                        "description": "The annotation generation source"
-                    },
                     "description": {
                         "type": "string",
                         "description": "Description for the Alignment Annotation"
                     },
-                    "graphType": {
-                        "type": "integer",
-                        "description": "Determines the rendering for the annotation<br><ul><li>0 - No graph</li><li>1 - Bar Graph</li><li>2 - Line graph</li></ul>",
-                        "enum": [
-                            "0",
-                            "1",
-                            "2"
-                        ]
-                    },
                     "label": {
                         "type": "string",
                         "description": "Label for the Alignment Annotation"
-                    },
-                    "score": {
-                        "type": "number",
-                        "description": "Score of the annotation"
-                    },
-                    "sequenceRef": {
-                        "type": "string",
-                        "description": "Reference to the sequence in the alignment<br> if per-sequence annotation"
                     }
                 }
             },
